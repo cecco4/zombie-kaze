@@ -4,7 +4,7 @@
 
 Add your content here.
 
-https://code.google.com/p/zombie-kaze/source/browse/?r=2#svn%2Fwiki
+https://code.google.com/p/zombie-kaze/source/browse/trunk/doc/html/index.html
 = Details =
 
 Add your content here.  Format your content with:
