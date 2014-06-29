@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Zombie-Kaze:  File sorgente input_output.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Zombie-Kaze
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Generato da Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">input_output.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="input__output_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00012"></a>00012 <a class="code" href="structmappa__dat.html" title="Struttura contenente i dati della mappa.">mappa_dat</a> <a class="code" href="input__output_8cc.html#af91c42ef64f8014600d4fa0693717d14" title="Carica la mappa da un file .map in &quot;data/mappe&quot; in una matrice statica, ritornando il tutto in uno st...">carica_mappa</a>(<span class="keywordtype">char</span> n_mappa);
+<a name="l00013"></a>00013 
+<a name="l00021"></a>00021 <span class="keywordtype">void</span> <a class="code" href="input__output_8cc.html#a85af57e0be1130f14f75c2697ea0472a" title="Setta i bool nel array tasto (inizializzato nel main), in base al tasto premuto o rilasciato...">aggiorna_tasti</a>(ALLEGRO_EVENT &amp;ev, <span class="keywordtype">bool</span> tasto[], <span class="keywordtype">bool</span> <span class="keyword">set</span>);
+<a name="l00022"></a>00022 
+<a name="l00037"></a>00037 <span class="keywordtype">int</span> <a class="code" href="input__output_8cc.html#ac5f115a8ebe4017787ab921ff7a8b883" title="controlla se ci sono tutte le texture della mappa, provando ad accedere ai file.">controlla_texture_mappa</a>(<a class="code" href="structmappa__dat.html" title="Struttura contenente i dati della mappa.">mappa_dat</a> &amp;map, <span class="keywordtype">int</span> *text_list, <a class="code" href="structnemici__dat.html" title="Struttura contenente i dati di tutti i nemici sulla mappa.">nemici_dat</a> &amp;nem);
+<a name="l00038"></a>00038 
+<a name="l00046"></a>00046 <span class="keywordtype">bool</span> <a class="code" href="input__output_8cc.html#a529e27b4d6e0f9cf078632ef47e06a1f" title="Carica le texture necessarie al livello su un array di texture_dat ritorna true se tutto è andato ben...">carica_texture_mappa</a>(<a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> texture[], <span class="keywordtype">int</span> *text_list, <span class="keywordtype">int</span> num_tex);
+<a name="l00047"></a>00047 
+<a name="l00053"></a>00053 <span class="keywordtype">bool</span> <a class="code" href="input__output_8cc.html#af581f437e28bf6d1f693480299175756" title="Carica le texture del nemico su un array di texture dat ritorna true se tutto è andato bene...">carica_texture_nemico</a>(<a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> text[]);
+<a name="l00054"></a>00054 
+<a name="l00063"></a>00063 <a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> <a class="code" href="input__output_8cc.html#a159608de82665b7bee07e33554883a85" title="carica un immagine generica e la salva su un immagine_dat ritorna la struttura con l&#39;immagine salvata...">carica_immagine</a> ( <a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> img, <span class="keyword">const</span> <span class="keywordtype">char</span> *path);
+<a name="l00064"></a>00064 
+<a name="l00070"></a>00070 <span class="keywordtype">bool</span> <a class="code" href="input__output_8cc.html#a712330d7c6c595b2e912e8d4e4f2fe70" title="Carica l&#39;audio del gioco, ritornando true se è andato tutto bene, false in caso contrario.">carica_audio</a>(<a class="code" href="structaudio__dat.html" title="Struttura contenente i dati dell&#39; audio.">audio_dat</a> &amp;audio);
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Generato Dom 29 Giu 2014 15:32:16 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>
