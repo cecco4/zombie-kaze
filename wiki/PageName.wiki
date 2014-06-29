@@ -3,4 +3,4 @@
 Zombie-kaze è un piccolo gioco arcade che si sviluppa su 10 livelli, in ognuno dei quali bisogna uccidere tutti gli zombie sulla mappa. Ogni nemico è dotato di una bomba e non esiterà a farsi esplodere nel caso si trovi nelle vostre immediate vicinanze.
 
 
-https://code.google.com/p/zombie-kaze/source/browse/trunk/src/data/sprite/pistola.png
+https://code.google.com/p/zombie-kaze/source/browse/trunk/src/data/texture/5.png
