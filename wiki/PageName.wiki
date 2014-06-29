@@ -1,13 +1,3 @@
-#summary One-sentence summary of this page.
+= Zombie-kaze =
 
-= Introduction =
-
-Add your content here.
-
-https://code.google.com/p/zombie-kaze/source/browse/trunk/doc/html/index.html
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+Zombie-kaze è un piccolo gioco arcade che si sviluppa su 10 livelli, in ognuno dei quali bisogna uccidere tutti gli zombie sulla mappa. Ogni nemico è dotato di una bomba e non esiterà a farsi esplodere nel caso si trovi nelle vostre immediate vicinanze.
