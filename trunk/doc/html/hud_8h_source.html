@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Zombie-Kaze:  File sorgente hud.h</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Zombie-Kaze
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Generato da Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="headertitle">
+<div class="title">hud.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="hud_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
+<a name="l00005"></a>00005 <span class="keywordtype">void</span> <a class="code" href="hud_8cc.html#a243fcf9bff2c0a99adb580e12543917f" title="Gestisce l&#39;animazione della pistola.">anim_pistola</a>(<a class="code" href="structpistola__dat.html" title="Struttura contenente i dati della pistola.">pistola_dat</a> &amp;pist);
+<a name="l00006"></a>00006 
+<a name="l00011"></a>00011 <span class="keywordtype">void</span> <a class="code" href="hud_8cc.html#a7e0a453573c258cca80f7b9c85908418" title="Disegna l&#39;immagine della pistola.">disegna_pistola</a>(<a class="code" href="structpistola__dat.html" title="Struttura contenente i dati della pistola.">pistola_dat</a> &amp;pist);
+<a name="l00012"></a>00012 
+<a name="l00017"></a>00017 <span class="keywordtype">void</span> <a class="code" href="hud_8cc.html#aca2cfb9b27dcde16ca4755072c365c1c" title="Gestisce l&#39;animazione del titolo.">anim_titolo</a>(<a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> &amp;tit, <a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> &amp;sf, <a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53b" title="Stato del gioco, serve al gameloop (nel main) per eseguire diverse operazioni a seconda della fase in...">STATO</a> stato_gioco, <span class="keywordtype">char</span> lv);
+<a name="l00018"></a>00018 
+<a name="l00023"></a>00023 <span class="keywordtype">void</span> <a class="code" href="hud_8cc.html#a0e292d413ac244c8fb50e743a6ff3e03" title="Disegna l&#39;immagine del titolo.">disegna_titolo</a>(<a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> &amp;titolo, <a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> &amp;sfondo);
+<a name="l00024"></a>00024 
+</pre></div></div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Generato Dom 29 Giu 2014 15:32:16 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

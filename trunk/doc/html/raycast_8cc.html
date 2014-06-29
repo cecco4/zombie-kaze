@@ -1,0 +1,811 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<title>Zombie-Kaze: Riferimenti per il file raycast.cc</title>
+
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+
+</head>
+<body>
+<div id="top"><!-- do not remove this div! -->
+
+
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  
+  
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">Zombie-Kaze
+   
+   </div>
+   
+  </td>
+  
+  
+  
+ </tr>
+ </tbody>
+</table>
+</div>
+
+<!-- Generato da Doxygen 1.7.6.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Pagina&#160;Principale</span></a></li>
+      <li><a href="annotated.html"><span>Classi</span></a></li>
+      <li class="current"><a href="files.html"><span>File</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Cerca" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Elenco&#160;dei&#160;file</span></a></li>
+      <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definizioni</a> &#124;
+<a href="#func-members">Funzioni</a>  </div>
+  <div class="headertitle">
+<div class="title">Riferimenti per il file raycast.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
+<code>#include &lt;math.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro.h&gt;</code><br/>
+<code>#include &lt;allegro5/allegro_image.h&gt;</code><br/>
+<code>#include &quot;<a class="el" href="struttura__dati_8h_source.html">struttura_dati.h</a>&quot;</code><br/>
+<code>#include &quot;<a class="el" href="raycast_8h_source.html">raycast.h</a>&quot;</code><br/>
+</div><table class="memberdecls">
+<tr><td colspan="2"><h2><a name="define-members"></a>
+Definizioni</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#a525335710b53cb064ca56b936120431e">_USE_MATH_DEFINES</a></td></tr>
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funzioni</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#ac84354a5d9d83509fa701d4bc251e0ae">sort_nemici</a> (int a[], int n, <a class="el" href="structnemici__dat.html">nemici_dat</a> &amp;nem)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ordina i nemici in base alla distanza dal giocatore.  <a href="#ac84354a5d9d83509fa701d4bc251e0ae"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#aa15f09960181b3e9f70492ff01c2bb81">alpha_cmp</a> (ALLEGRO_COLOR c)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Ritorna true se il colore dato per parametro è uguale al colore usato per identificare la trasparenza di una immagine.  <a href="#aa15f09960181b3e9f70492ff01c2bb81"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#a66cd3c9531caaf3edd8212d0450c5b06">disegna_sprite</a> (int n, <a class="el" href="structplayer__dat.html">player_dat</a> &amp;pl, <a class="el" href="structnemici__dat.html">nemici_dat</a> &amp;nem, <a class="el" href="structmappa__dat.html">mappa_dat</a> &amp;map, int zbuffer[], ALLEGRO_COLOR render[][<a class="el" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b">lschermo</a>])</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Disegna le sprite dei nemici sulla render matrix.  <a href="#a66cd3c9531caaf3edd8212d0450c5b06"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static ALLEGRO_COLOR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#af17327e8f30901ed070fd9413dfc331a">effetto_distanza</a> (ALLEGRO_COLOR col, double dist)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Conferisce un effetto di distanza ai muri scurendoli.  <a href="#af17327e8f30901ed070fd9413dfc331a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#a5b4615cd4bb62c1c29dfd7e3bb2a3739">to_360</a> (double ang)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dato un numero lo riporta ad un intervallo fra 0 e 360.  <a href="#a5b4615cd4bb62c1c29dfd7e3bb2a3739"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#ac2200150c9f43d15c533f992f37b5f96">rad</a> (double ang)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dato un angolo in gradi lo converte in radianti.  <a href="#ac2200150c9f43d15c533f992f37b5f96"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#a8d44f8f8e008d0cde33d2c3d6977f62f">grad</a> (double ang)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Dato un angolo in radianti lo converte in gradi.  <a href="#a8d44f8f8e008d0cde33d2c3d6977f62f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#a90e8e16b79daf4b918e5535a026e57ed">raycast</a> (<a class="el" href="structplayer__dat.html">player_dat</a> &amp;pl, <a class="el" href="structnemici__dat.html">nemici_dat</a> &amp;nem, <a class="el" href="structmappa__dat.html">mappa_dat</a> &amp;map, <a class="el" href="structtexture__dat.html">texture_dat</a> *texture, ALLEGRO_COLOR render[][<a class="el" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b">lschermo</a>])</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Funzione principale per quanto concerne la grafica del gioco.  <a href="#a90e8e16b79daf4b918e5535a026e57ed"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#a04851c30cecc4ffff04b48e05531f231">pulisci_render_matrix</a> (ALLEGRO_COLOR render_matrix[<a class="el" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf">hschermo</a>][<a class="el" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b">lschermo</a>])</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pulisce la matrice utilizzata per il rendering, preparandola quindi ad essere plasmata da <a class="el" href="raycast_8h.html#a90e8e16b79daf4b918e5535a026e57ed" title="Funzione principale per quanto concerne la grafica del gioco.">raycast</a>.  <a href="#a04851c30cecc4ffff04b48e05531f231"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="raycast_8cc.html#aa247b5ff21e7bf49cfb5e87c2db6fc99">applica_render_matrix</a> (ALLEGRO_COLOR render_matrix[<a class="el" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf">hschermo</a>][<a class="el" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b">lschermo</a>], ALLEGRO_BITMAP *rendering)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Trasforma la matrice di colori in immagine che verrà poi disegnata sul display dal <a class="el" href="main_8cc.html#a840291bc02cba5474a4cb46a9b9566fe" title="Funzione principale.">main</a>.  <a href="#aa247b5ff21e7bf49cfb5e87c2db6fc99"></a><br/></td></tr>
+</table>
+<hr/><h2>Documentazione delle definizioni</h2>
+<a class="anchor" id="a525335710b53cb064ca56b936120431e"></a><!-- doxytag: member="raycast.cc::_USE_MATH_DEFINES" ref="a525335710b53cb064ca56b936120431e" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define <a class="el" href="struttura__dati_8h.html#a525335710b53cb064ca56b936120431e">_USE_MATH_DEFINES</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Documentazione delle funzioni</h2>
+<a class="anchor" id="aa15f09960181b3e9f70492ff01c2bb81"></a><!-- doxytag: member="raycast.cc::alpha_cmp" ref="aa15f09960181b3e9f70492ff01c2bb81" args="(ALLEGRO_COLOR c)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool <a class="el" href="raycast_8cc.html#aa15f09960181b3e9f70492ff01c2bb81">alpha_cmp</a> </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_COLOR&#160;</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ritorna true se il colore dato per parametro è uguale al colore usato per identificare la trasparenza di una immagine. </p>
+<div class="fragment"><pre class="fragment">{
+        <span class="keywordflow">if</span> (c.r == 1 &amp;&amp; c.g == 0 &amp;&amp; c.b == 1)
+                <span class="keywordflow">return</span> <span class="keyword">false</span>;
+        
+        <span class="keywordflow">return</span> <span class="keyword">true</span>;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="aa247b5ff21e7bf49cfb5e87c2db6fc99"></a><!-- doxytag: member="raycast.cc::applica_render_matrix" ref="aa247b5ff21e7bf49cfb5e87c2db6fc99" args="(ALLEGRO_COLOR render_matrix[hschermo][lschermo], ALLEGRO_BITMAP *rendering)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="raycast_8h.html#aa247b5ff21e7bf49cfb5e87c2db6fc99">applica_render_matrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_COLOR&#160;</td>
+          <td class="paramname"><em>render_matrix</em>[hschermo][lschermo], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_BITMAP *&#160;</td>
+          <td class="paramname"><em>rendering</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Trasforma la matrice di colori in immagine che verrà poi disegnata sul display dal <a class="el" href="main_8cc.html#a840291bc02cba5474a4cb46a9b9566fe" title="Funzione principale.">main</a>. </p>
+<p>Parametri: render_matrix matrice per il rendering Parametri: rendering immagine finale </p>
+<div class="fragment"><pre class="fragment">{
+        al_lock_bitmap(rendering, ALLEGRO_PIXEL_FORMAT_ANY, ALLEGRO_LOCK_WRITEONLY);
+
+        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf" title="Altezza dello schermo.">hschermo</a>; i++) 
+                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>; j++) {
+                
+                        al_put_pixel(j, i,      render_matrix[i][j] );                  
+                }
+
+        al_unlock_bitmap(rendering);    
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a66cd3c9531caaf3edd8212d0450c5b06"></a><!-- doxytag: member="raycast.cc::disegna_sprite" ref="a66cd3c9531caaf3edd8212d0450c5b06" args="(int n, player_dat &amp;pl, nemici_dat &amp;nem, mappa_dat &amp;map, int zbuffer[], ALLEGRO_COLOR render[][lschermo])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="raycast_8cc.html#a66cd3c9531caaf3edd8212d0450c5b06">disegna_sprite</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structplayer__dat.html">player_dat</a> &amp;&#160;</td>
+          <td class="paramname"><em>pl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnemici__dat.html">nemici_dat</a> &amp;&#160;</td>
+          <td class="paramname"><em>nem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmappa__dat.html">mappa_dat</a> &amp;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>zbuffer</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_COLOR&#160;</td>
+          <td class="paramname"><em>render</em>[][lschermo]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Disegna le sprite dei nemici sulla render matrix. </p>
+<div class="fragment"><pre class="fragment">{       
+        <span class="keywordtype">double</span> xsprite = nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n].<a class="code" href="structnemico__dat.html#a8671e18e611267e6f5a0a33a0aa96371" title="Coordinata x.">x</a>;
+        <span class="keywordtype">double</span> ysprite = nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n].<a class="code" href="structnemico__dat.html#ae77c14ff4bea0943f352d4f7eec20ddb" title="Coordinata y.">y</a>;       
+        <span class="keywordtype">int</span> l = map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>;
+                        
+        <span class="keywordtype">double</span> dx = xsprite - pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a>;
+        <span class="keywordtype">double</span> dy = ysprite - pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a>;
+
+
+        <span class="keywordtype">double</span> spr_ang = <a class="code" href="raycast_8cc.html#a5b4615cd4bb62c1c29dfd7e3bb2a3739" title="Dato un numero lo riporta ad un intervallo fra 0 e 360.">to_360</a>(<a class="code" href="raycast_8cc.html#a8d44f8f8e008d0cde33d2c3d6977f62f" title="Dato un angolo in radianti lo converte in gradi.">grad</a>(atan2(dy, dx))+pl.<a class="code" href="structplayer__dat.html#ae51ef04fa403d4694a36380e54b3148d" title="Angolo in gradi.">ang</a>+pl.<a class="code" href="structplayer__dat.html#ac9b0f334d439e2ad54db873406489f62" title="Field of view del giocatore.">fov</a>);     
+                
+        <span class="keywordtype">double</span> dists = nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n].<a class="code" href="structnemico__dat.html#a4df41dde8f4d6a21750610b919487484" title="Distanza dal giocatore.">dist</a> - fabs(pl.<a class="code" href="structplayer__dat.html#ac9b0f334d439e2ad54db873406489f62" title="Field of view del giocatore.">fov</a>-spr_ang)/3 ;
+        
+        
+        <span class="keywordtype">double</span> lproj =  (l/ dists) * <a class="code" href="struttura__dati_8h.html#ac135773066aa5d3223927deba36fdb2c" title="distanza del piano di proiezione dallo schermo">dist_schermo</a>;
+        
+        <span class="keywordtype">int</span> posx = (spr_ang-pl.<a class="code" href="structplayer__dat.html#ac9b0f334d439e2ad54db873406489f62" title="Field of view del giocatore.">fov</a>/2)*<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a> / pl.<a class="code" href="structplayer__dat.html#ac9b0f334d439e2ad54db873406489f62" title="Field of view del giocatore.">fov</a>;
+        
+        <span class="keywordtype">double</span> hs = (l / dists) * <a class="code" href="struttura__dati_8h.html#ac135773066aa5d3223927deba36fdb2c" title="distanza del piano di proiezione dallo schermo">dist_schermo</a>;
+        
+        <span class="keywordflow">if</span> (lproj&lt;= 0 || lproj&gt;<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>*2 || hs&lt;=0 || hs&gt;<a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf" title="Altezza dello schermo.">hschermo</a>*2)
+                <span class="keywordflow">return</span>;
+
+        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;lproj/2;j++) {
+        
+                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k=0; k&lt;hs; k++) {
+                
+                        <span class="keywordtype">int</span> posy = hschermo/2 - hs/2 +k;                
+                
+                        <span class="keywordflow">if</span> ( posy&lt;hschermo &amp;&amp; posy&gt;=0) {
+                                <span class="keywordtype">int</span> xoff = int(j*l/lproj) ;
+                                <span class="keywordtype">int</span> yoff = int(k*l/hs) %l;
+                                <span class="keywordtype">int</span> frame = nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n].<a class="code" href="structnemico__dat.html#a0da2ca593351036cd4ce45c5d5d3dc34" title="Frame attuale dell&#39;animazione.">frame</a>; 
+                                        
+                                <span class="keywordflow">if</span> (zbuffer[posx+j]&gt;dists &amp;&amp; posx+j&lt;lschermo &amp;&amp; posx+j&gt;=0 ) {
+                                        
+                                        ALLEGRO_COLOR col = nem.<a class="code" href="structnemici__dat.html#ad3760d45d329954d5211f392cc7e1120" title="Sprite dei nemici.">text</a>[frame].<a class="code" href="structtexture__dat.html#a2d4e329432e9f424959bdb18c1b92c42" title="Matrice di colori, ovvero l&#39; immagine.">img</a>[yoff][32+xoff]; 
+                                        <span class="keywordflow">if</span> (<a class="code" href="raycast_8cc.html#aa15f09960181b3e9f70492ff01c2bb81" title="Ritorna true se il colore dato per parametro è uguale al colore usato per identificare la trasparenza...">alpha_cmp</a>(col))
+                                                render[posy][posx+j] = <a class="code" href="raycast_8cc.html#af17327e8f30901ed070fd9413dfc331a" title="Conferisce un effetto di distanza ai muri scurendoli.">effetto_distanza</a>(col,dists); 
+                                }
+                                <span class="keywordflow">if</span> (zbuffer[posx-j]&gt;dists &amp;&amp; posx-j&gt;=0 &amp;&amp; posx-j &lt;<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>) {
+                                        
+                                        ALLEGRO_COLOR col = nem.<a class="code" href="structnemici__dat.html#ad3760d45d329954d5211f392cc7e1120" title="Sprite dei nemici.">text</a>[frame].<a class="code" href="structtexture__dat.html#a2d4e329432e9f424959bdb18c1b92c42" title="Matrice di colori, ovvero l&#39; immagine.">img</a>[yoff][31-xoff];
+                                        <span class="keywordflow">if</span> (<a class="code" href="raycast_8cc.html#aa15f09960181b3e9f70492ff01c2bb81" title="Ritorna true se il colore dato per parametro è uguale al colore usato per identificare la trasparenza...">alpha_cmp</a>(col))
+                                                render[posy][posx-j] = <a class="code" href="raycast_8cc.html#af17327e8f30901ed070fd9413dfc331a" title="Conferisce un effetto di distanza ai muri scurendoli.">effetto_distanza</a>(col,dists); 
+                                }
+                        }
+                }
+        }
+
+
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="af17327e8f30901ed070fd9413dfc331a"></a><!-- doxytag: member="raycast.cc::effetto_distanza" ref="af17327e8f30901ed070fd9413dfc331a" args="(ALLEGRO_COLOR col, double dist)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static ALLEGRO_COLOR <a class="el" href="raycast_8cc.html#af17327e8f30901ed070fd9413dfc331a">effetto_distanza</a> </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_COLOR&#160;</td>
+          <td class="paramname"><em>col</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>dist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Conferisce un effetto di distanza ai muri scurendoli. </p>
+<div class="fragment"><pre class="fragment">{
+        <span class="keywordtype">double</span> blend = dist*2/1000; 
+        
+        <span class="keywordflow">if</span> (blend&gt;1) {
+                col.r /= blend;
+                col.g /= blend;
+                col.b /= blend;         
+        }
+
+        <span class="keywordflow">return</span> col;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a8d44f8f8e008d0cde33d2c3d6977f62f"></a><!-- doxytag: member="raycast.cc::grad" ref="a8d44f8f8e008d0cde33d2c3d6977f62f" args="(double ang)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="raycast_8h.html#a8d44f8f8e008d0cde33d2c3d6977f62f">grad</a> </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ang</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dato un angolo in radianti lo converte in gradi. </p>
+<p>Parametri: ang angolo </p>
+<div class="fragment"><pre class="fragment">{       
+        <span class="keywordflow">return</span> ang / M_PI * 180.0;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a04851c30cecc4ffff04b48e05531f231"></a><!-- doxytag: member="raycast.cc::pulisci_render_matrix" ref="a04851c30cecc4ffff04b48e05531f231" args="(ALLEGRO_COLOR render_matrix[hschermo][lschermo])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="raycast_8h.html#a04851c30cecc4ffff04b48e05531f231">pulisci_render_matrix</a> </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_COLOR&#160;</td>
+          <td class="paramname"><em>render_matrix</em>[hschermo][lschermo]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Pulisce la matrice utilizzata per il rendering, preparandola quindi ad essere plasmata da <a class="el" href="raycast_8h.html#a90e8e16b79daf4b918e5535a026e57ed" title="Funzione principale per quanto concerne la grafica del gioco.">raycast</a>. </p>
+<p>Parametri: render_matrix matrice per il rendering </p>
+<div class="fragment"><pre class="fragment">{
+        <span class="keywordflow">for</span>( <span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf" title="Altezza dello schermo.">hschermo</a>; i++)
+                <span class="keywordflow">for</span>( <span class="keywordtype">int</span> j=0; j&lt;<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>; j++)  
+                        render_matrix[i][j] = al_map_rgb(0,0,0);
+
+        
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="ac2200150c9f43d15c533f992f37b5f96"></a><!-- doxytag: member="raycast.cc::rad" ref="ac2200150c9f43d15c533f992f37b5f96" args="(double ang)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="raycast_8h.html#ac2200150c9f43d15c533f992f37b5f96">rad</a> </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ang</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dato un angolo in gradi lo converte in radianti. </p>
+<p>Parametri: ang angolo </p>
+<div class="fragment"><pre class="fragment">{       
+        <span class="keywordflow">return</span> ang* M_PI / 180.0;
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a90e8e16b79daf4b918e5535a026e57ed"></a><!-- doxytag: member="raycast.cc::raycast" ref="a90e8e16b79daf4b918e5535a026e57ed" args="(player_dat &amp;pl, nemici_dat &amp;nem, mappa_dat &amp;map, texture_dat *texture, ALLEGRO_COLOR render[][lschermo])" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="raycast_8h.html#a90e8e16b79daf4b918e5535a026e57ed">raycast</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structplayer__dat.html">player_dat</a> &amp;&#160;</td>
+          <td class="paramname"><em>pl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnemici__dat.html">nemici_dat</a> &amp;&#160;</td>
+          <td class="paramname"><em>nem</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structmappa__dat.html">mappa_dat</a> &amp;&#160;</td>
+          <td class="paramname"><em>map</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtexture__dat.html">texture_dat</a> *&#160;</td>
+          <td class="paramname"><em>texture</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_COLOR&#160;</td>
+          <td class="paramname"><em>render</em>[][lschermo]&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funzione principale per quanto concerne la grafica del gioco. </p>
+<p>Questa funzione in base alla mappa, costruisce una visuale in falso 3d dell'ambiente circostante. Disegna i muri con una tecnica chiamata appunto raycasting, dopodichè aggiunge i nemici appoggiandosi a <a class="el" href="raycast_8cc.html#a66cd3c9531caaf3edd8212d0450c5b06" title="Disegna le sprite dei nemici sulla render matrix.">disegna_sprite</a> .</p>
+<p>Parametri: pl dati del giocatore Parametri: nem dati dei nemici Parametri: map dati della mappa Parametri: texture texture dei muri Parametri: render matrice sulla quale verranno applicate tutta la visuale grafica calcolata nella funzione </p>
+<div class="fragment"><pre class="fragment">{
+        
+        <span class="comment">//vettore che conterrà tutte le distanze dei muri</span>
+        <span class="keywordtype">int</span> zbuffer[<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>];  
+        
+        <span class="comment">//vettore che conterrà tutti i blocchi in cui passeranno i raggi</span>
+        <span class="keywordtype">bool</span> blocchi_in_vista[map.<a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791" title="Numero blocchi per lato della mappa.">dim</a>][map.<a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791" title="Numero blocchi per lato della mappa.">dim</a>];  
+        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;map.<a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791" title="Numero blocchi per lato della mappa.">dim</a>; i++) <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=0; j&lt;map.<a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791" title="Numero blocchi per lato della mappa.">dim</a>; j++)
+                blocchi_in_vista[i][j] = <span class="keyword">false</span>;
+
+        
+        
+        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=0; i&lt;<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>; i++) {
+                <span class="comment">//calcolo angolo del raggio (in gradi)</span>
+                <span class="keywordtype">double</span> angray = <a class="code" href="raycast_8cc.html#a5b4615cd4bb62c1c29dfd7e3bb2a3739" title="Dato un numero lo riporta ad un intervallo fra 0 e 360.">to_360</a>( pl.<a class="code" href="structplayer__dat.html#ae51ef04fa403d4694a36380e54b3148d" title="Angolo in gradi.">ang</a> + pl.<a class="code" href="structplayer__dat.html#ac9b0f334d439e2ad54db873406489f62" title="Field of view del giocatore.">fov</a>/2 - (pl.<a class="code" href="structplayer__dat.html#ac9b0f334d439e2ad54db873406489f62" title="Field of view del giocatore.">fov</a>/lschermo)*i );
+                <span class="keywordtype">double</span> tg_ang = tan(<a class="code" href="raycast_8cc.html#ac2200150c9f43d15c533f992f37b5f96" title="Dato un angolo in gradi lo converte in radianti.">rad</a>(angray)); <span class="comment">// si usa spesso quindi risparmio   </span>
+
+                <span class="comment">//direzione raggio</span>
+                <span class="keywordtype">bool</span> <a class="code" href="logica__gioco_8cc.html#a77d32c22115115152439406d75895b2da993c8ae02a4eb216e79975d9c4b30ba7">su</a>, dx;     
+                <span class="keywordflow">if</span> (angray &gt; 0 &amp;&amp; angray &lt; 180)    
+                        su = <span class="keyword">true</span>;
+                <span class="keywordflow">else</span> 
+                        su = <span class="keyword">false</span>;    <span class="comment">//  !su = giù</span>
+                        
+                <span class="keywordflow">if</span> (angray &gt; 90 &amp;&amp; angray &lt; 270)
+                        dx = <span class="keyword">false</span>;        <span class="comment">//  !dx = sx </span>
+                <span class="keywordflow">else</span> 
+                        dx = <span class="keyword">true</span>;      
+                        
+
+                <span class="comment">//intersezioni orrizzontali</span>
+                <span class="keywordtype">double</span> xo, yo;          <span class="comment">//punto prima intersezione</span>
+                <span class="keywordflow">if</span> (su) 
+                        yo = pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a> - (fmod(pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a>, map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>));
+                <span class="keywordflow">else</span> 
+                        yo = pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a> - (fmod(pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a>, map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)) + map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>;
+                        
+                xo = pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a> + (pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a> - yo) / tg_ang;
+                
+                <span class="keywordtype">double</span> xs,ys; <span class="comment">// variabili step</span>
+                xs= map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a> / tg_ang;
+                        
+                <span class="keywordflow">if</span> (su) 
+                        ys = -map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>; 
+                <span class="keywordflow">else</span> {
+                        ys = map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>; 
+                        xs = -xs;
+                }
+                
+                <span class="keywordtype">int</span> tile_o;
+                <span class="keywordflow">while</span>(  yo/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a> &gt;= 0  &amp;&amp; yo/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>&lt;map.<a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791" title="Numero blocchi per lato della mappa.">dim</a>  &amp;&amp;
+                                xo/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a> &gt;= 0  &amp;&amp; xo/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>&lt;map.<a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791" title="Numero blocchi per lato della mappa.">dim</a>      ) {
+                                
+                        tile_o = map.<a class="code" href="structmappa__dat.html#aa8812a67b74b6433219812c8b95ae2cb" title="matrice dinamica che contiene le informazioni sulla locazione dei muri">data</a>[int(yo/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)-1*<a class="code" href="logica__gioco_8cc.html#a77d32c22115115152439406d75895b2da993c8ae02a4eb216e79975d9c4b30ba7">su</a>][int(xo/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)];
+                        
+                        <span class="keywordflow">if</span> (tile_o != 0)
+                                <span class="keywordflow">break</span>;
+                        
+                        blocchi_in_vista[int(yo/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)-1*<a class="code" href="logica__gioco_8cc.html#a77d32c22115115152439406d75895b2da993c8ae02a4eb216e79975d9c4b30ba7">su</a>][int(xo/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)] = <span class="keyword">true</span>;  
+                                
+                        xo += xs;
+                        yo += ys;
+                }
+
+                
+                <span class="comment">//intersezioni verticali</span>
+                <span class="keywordtype">double</span> xv, yv;          <span class="comment">//punto prima intersezione</span>
+                <span class="keywordflow">if</span> (dx)
+                        xv = pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a> - (fmod(pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a>, map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)) + map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>;
+                <span class="keywordflow">else</span>
+                        xv = pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a> - (fmod(pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a>, map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>));
+
+                yv = pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a> + (pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a> - xv) * tg_ang;
+                
+                
+                <span class="comment">//variabili step</span>
+                ys = map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a> * tg_ang;
+                        
+                <span class="keywordflow">if</span> (dx) {
+                        xs = map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>;
+                        ys = -ys;
+                } <span class="keywordflow">else</span>
+                        xs = -map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>;
+
+                <span class="keywordtype">int</span> tile_v;             
+                <span class="keywordflow">while</span>(  yv/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a> &gt;= 0  &amp;&amp; yv/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>&lt;map.<a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791" title="Numero blocchi per lato della mappa.">dim</a>  &amp;&amp;
+                                xv/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a> &gt;= 0  &amp;&amp; xv/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>&lt;map.<a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791" title="Numero blocchi per lato della mappa.">dim</a>              ) {
+                
+                        tile_v = map.<a class="code" href="structmappa__dat.html#aa8812a67b74b6433219812c8b95ae2cb" title="matrice dinamica che contiene le informazioni sulla locazione dei muri">data</a>[int(yv/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)][int(xv/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)-1*!dx];          
+                        
+                        <span class="keywordflow">if</span> (tile_v != 0)
+                                <span class="keywordflow">break</span>;
+                                
+                        blocchi_in_vista[int(yv/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)][int(xv/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)-1*!dx] = <span class="keyword">true</span>;  
+                                
+                        xv += xs;
+                        yv += ys;
+                }        
+
+                
+                <span class="comment">//calcolo distanze intersezioni</span>
+                <span class="keywordtype">double</span> d_orr =  pow(pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a> - xo,2) + pow (pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a> - yo,2);
+                <span class="keywordtype">double</span> d_vert =  pow(pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a> - xv,2) + pow (pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a> - yv,2);
+        
+                
+                <span class="keywordtype">double</span> dist;
+                <span class="keywordtype">bool</span> shade=<span class="keyword">false</span>; 
+                <span class="keywordtype">int</span> off; <span class="comment">//offset texture</span>
+                <span class="keywordtype">int</span> ntile;
+                 
+                <span class="comment">//prendo la dist minore</span>
+                <span class="keywordflow">if</span> (d_orr &lt; d_vert) {   
+                        dist = d_orr; 
+                        shade=<span class="keyword">true</span>;   <span class="comment">// colorazione più scura dei muri orriz</span>
+                        
+                        ntile = tile_o;
+                        off = int(fmod(xo, map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>));
+                } <span class="keywordflow">else</span> {
+                        dist = d_vert;
+                        
+                        ntile = tile_v;
+                        off = int(fmod(yv, map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)); 
+                }
+
+                dist = sqrt(dist);
+
+                <span class="keywordflow">if</span> (i==lschermo/2)
+                        pl.<a class="code" href="structplayer__dat.html#ac3c1dd8e6cde041ef33a9638abc36fc8" title="Distanza dal muro più vicino.">dist_m</a> = dist; 
+                
+                
+                <span class="keywordflow">if</span> (dist==0)
+                        dist = 0.01;
+                        
+                zbuffer[i] = dist;  <span class="comment">//aggiorno zbuffer</span>
+
+
+                dist = dist * cos(<a class="code" href="raycast_8cc.html#ac2200150c9f43d15c533f992f37b5f96" title="Dato un angolo in gradi lo converte in radianti.">rad</a>(<a class="code" href="raycast_8cc.html#a5b4615cd4bb62c1c29dfd7e3bb2a3739" title="Dato un numero lo riporta ad un intervallo fra 0 e 360.">to_360</a>(pl.<a class="code" href="structplayer__dat.html#ae51ef04fa403d4694a36380e54b3148d" title="Angolo in gradi.">ang</a>-angray))); <span class="comment">//tolgo distorsione</span>
+                                
+                <span class="keywordtype">double</span> h_linea = (map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a> / dist) * <a class="code" href="struttura__dati_8h.html#ac135773066aa5d3223927deba36fdb2c" title="distanza del piano di proiezione dallo schermo">dist_schermo</a>;
+                
+ 
+                
+                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> k=0; k&lt;h_linea; k++) {
+                
+                        <span class="keywordtype">int</span> yoff =  map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a> - map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>*k / h_linea;
+                        
+                        <span class="keywordflow">if</span> (yoff&lt;0 &amp;&amp; yoff&gt;=lschermo)
+                                <span class="keywordflow">continue</span>;
+                        
+                        <span class="keywordtype">int</span> screen_pos = <a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf" title="Altezza dello schermo.">hschermo</a>/2+h_linea/2-k;
+                        
+                        <span class="keywordflow">if</span> (screen_pos &lt; hschermo &amp;&amp; screen_pos &gt;= 0) {
+                                ALLEGRO_COLOR col = texture[ntile].<a class="code" href="structtexture__dat.html#a2d4e329432e9f424959bdb18c1b92c42" title="Matrice di colori, ovvero l&#39; immagine.">img</a>[yoff%map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>][off];
+                                
+                                col = <a class="code" href="raycast_8cc.html#af17327e8f30901ed070fd9413dfc331a" title="Conferisce un effetto di distanza ai muri scurendoli.">effetto_distanza</a>(col, dist);
+                                
+                                <span class="keywordflow">if</span> (shade) {
+                                        col.r /= 1.5;
+                                        col.g /= 1.5;
+                                        col.b /= 1.5;
+                                }
+                                
+                                
+                                
+                                render[screen_pos][i] = col; 
+                        }
+                }
+                        
+
+                
+                        
+                <span class="comment">//rendering pavimento e soffitto   </span>
+                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j=<a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf" title="Altezza dello schermo.">hschermo</a>/2+h_linea/2-1;j&gt;=0 &amp;&amp; j&lt;<a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf" title="Altezza dello schermo.">hschermo</a>; j++) {
+        
+                        <span class="keywordtype">double</span> deltaPJ =  j- hschermo/2;
+                        <span class="keywordtype">double</span> p_ydist = pl.<a class="code" href="structplayer__dat.html#a050afd4135a3b8b9b64c34e76c1639aa" title="Altezza del giocatore.">h</a> / deltaPJ * <a class="code" href="struttura__dati_8h.html#ac135773066aa5d3223927deba36fdb2c" title="distanza del piano di proiezione dallo schermo">dist_schermo</a>; 
+                        <span class="keywordtype">double</span> p_dist = p_ydist / cos(<a class="code" href="raycast_8cc.html#ac2200150c9f43d15c533f992f37b5f96" title="Dato un angolo in gradi lo converte in radianti.">rad</a>(angray-pl.<a class="code" href="structplayer__dat.html#ae51ef04fa403d4694a36380e54b3148d" title="Angolo in gradi.">ang</a>));
+                
+                
+                                        
+                        <span class="keywordtype">int</span> px = pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a> + p_dist*cos(-1*<a class="code" href="raycast_8cc.html#ac2200150c9f43d15c533f992f37b5f96" title="Dato un angolo in gradi lo converte in radianti.">rad</a>(angray));
+                        <span class="keywordtype">int</span> py = pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a> + p_dist*sin(-1*<a class="code" href="raycast_8cc.html#ac2200150c9f43d15c533f992f37b5f96" title="Dato un angolo in gradi lo converte in radianti.">rad</a>(angray));
+                        
+                                        
+                        px&lt;0 ? px = -px : px;
+                        py&lt;0 ? py = -py : py;
+                        
+                        
+                        px = px % map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>; <span class="comment">//calcolo il pixel da pescare</span>
+                        py = py % map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>;
+                                 
+                        <span class="comment">//pavimento:</span>
+                        render[j][i] = <a class="code" href="raycast_8cc.html#af17327e8f30901ed070fd9413dfc331a" title="Conferisce un effetto di distanza ai muri scurendoli.">effetto_distanza</a>(texture[0].img[py][px],p_dist);
+                        <span class="comment">//soffitto:</span>
+                        render[hschermo-j-1][i] = <a class="code" href="raycast_8cc.html#af17327e8f30901ed070fd9413dfc331a" title="Conferisce un effetto di distanza ai muri scurendoli.">effetto_distanza</a>(texture[1].img[py][px],p_dist);  
+                        
+                } 
+        
+        
+        }
+        
+        
+        
+                
+        <span class="comment">//disegno sprite</span>
+
+
+        <span class="comment">//calcolo le sprite che sono da disegnare</span>
+        <span class="keywordtype">int</span> da_disegnare[nem.<a class="code" href="structnemici__dat.html#ab9f6af23f8e24915ab8e328a76d3c930" title="Numero nemici.">num_nemici</a>];
+        <span class="keywordtype">int</span> n_da_disegnare=0;
+        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n=0; n &lt; nem.<a class="code" href="structnemici__dat.html#ab9f6af23f8e24915ab8e328a76d3c930" title="Numero nemici.">num_nemici</a>; n++) {
+                <span class="keywordtype">double</span> xsprite = nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n].<a class="code" href="structnemico__dat.html#a8671e18e611267e6f5a0a33a0aa96371" title="Coordinata x.">x</a>;
+                <span class="keywordtype">double</span> ysprite = nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n].<a class="code" href="structnemico__dat.html#ae77c14ff4bea0943f352d4f7eec20ddb" title="Coordinata y.">y</a>; 
+                nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n].<a class="code" href="structnemico__dat.html#a41f88af2ac81498e51823af81a90057a" title="true se è stato visto">vis</a> = <span class="keyword">false</span>;
+                
+                <span class="keywordflow">if</span>(blocchi_in_vista[<span class="keywordtype">int</span>(ysprite/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)][<span class="keywordtype">int</span>(xsprite/map.<a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>)]) {          
+                        da_disegnare[n_da_disegnare] = n;
+                        n_da_disegnare++;
+                        nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n].<a class="code" href="structnemico__dat.html#a41f88af2ac81498e51823af81a90057a" title="true se è stato visto">vis</a> = <span class="keyword">true</span>;
+                        nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n].<a class="code" href="structnemico__dat.html#a7eaec74f66484b6bd53d377038d5cdcd" title="se true insegue il giocatore">insegui</a> = <span class="keyword">true</span>;   
+                }
+        }
+        <span class="comment">//calcolo distanze</span>
+        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n=0; n &lt; n_da_disegnare; n++) {
+                <span class="keywordtype">int</span> n_spr = da_disegnare[n];
+                nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n_spr].<a class="code" href="structnemico__dat.html#a4df41dde8f4d6a21750610b919487484" title="Distanza dal giocatore.">dist</a> = 
+                        sqrt(   pow(pl.<a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a> - nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n_spr].<a class="code" href="structnemico__dat.html#a8671e18e611267e6f5a0a33a0aa96371" title="Coordinata x.">x</a>,2) + 
+                                        pow (pl.<a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a> - nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[n_spr].<a class="code" href="structnemico__dat.html#ae77c14ff4bea0943f352d4f7eec20ddb" title="Coordinata y.">y</a>,2)              );
+
+        }       
+        
+        <span class="comment">//metto le sprite in fila in base alla distanza</span>
+        <a class="code" href="raycast_8cc.html#ac84354a5d9d83509fa701d4bc251e0ae" title="Ordina i nemici in base alla distanza dal giocatore.">sort_nemici</a>(da_disegnare, n_da_disegnare, nem);
+        
+        <span class="comment">//disegno le sprite in fila</span>
+        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> n=0; n &lt; n_da_disegnare; n++) {
+                <span class="keywordtype">int</span> n_spr = da_disegnare[n];
+                <a class="code" href="raycast_8cc.html#a66cd3c9531caaf3edd8212d0450c5b06" title="Disegna le sprite dei nemici sulla render matrix.">disegna_sprite</a>(n_spr, pl, nem, map, zbuffer, render);
+    }
+                        
+        
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="ac84354a5d9d83509fa701d4bc251e0ae"></a><!-- doxytag: member="raycast.cc::sort_nemici" ref="ac84354a5d9d83509fa701d4bc251e0ae" args="(int a[], int n, nemici_dat &amp;nem)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="raycast_8cc.html#ac84354a5d9d83509fa701d4bc251e0ae">sort_nemici</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>a</em>[], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>n</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structnemici__dat.html">nemici_dat</a> &amp;&#160;</td>
+          <td class="paramname"><em>nem</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Ordina i nemici in base alla distanza dal giocatore. </p>
+<p>questa funzione implementa un algoritmo di sorting molto semplice (bubble sort) in quanto i nemici da ordinare sono di un ordine di grandezza basso. </p>
+<div class="fragment"><pre class="fragment">{
+        <span class="keywordtype">bool</span> scambio=<span class="keyword">true</span>;
+        <span class="keywordflow">while</span> (scambio)
+        {       
+                scambio=<span class="keyword">false</span>;
+                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i=1; i&lt;n; i++)
+                {
+                        <span class="keywordflow">if</span> (nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[a[i]].<a class="code" href="structnemico__dat.html#a4df41dde8f4d6a21750610b919487484" title="Distanza dal giocatore.">dist</a>&gt;nem.<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>[a[i-1]].<a class="code" href="structnemico__dat.html#a4df41dde8f4d6a21750610b919487484" title="Distanza dal giocatore.">dist</a>) {            
+                                <span class="keywordtype">int</span> temp = a[i];
+                                a[i] = a[i-1];
+                                a[i-1] = temp;
+                                scambio=<span class="keyword">true</span>;
+                        }       
+                }
+        }
+
+
+}
+</pre></div>
+</div>
+</div>
+<a class="anchor" id="a5b4615cd4bb62c1c29dfd7e3bb2a3739"></a><!-- doxytag: member="raycast.cc::to_360" ref="a5b4615cd4bb62c1c29dfd7e3bb2a3739" args="(double ang)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double <a class="el" href="raycast_8h.html#a5b4615cd4bb62c1c29dfd7e3bb2a3739">to_360</a> </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>ang</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Dato un numero lo riporta ad un intervallo fra 0 e 360. </p>
+<p>Parametri: ang numero </p>
+<div class="fragment"><pre class="fragment">{
+        ang &gt;= 360? ang=ang-360 : ang;
+        ang &lt; 0 ? ang =ang+360 : ang;
+        <span class="keywordflow">return</span> ang;
+}
+</pre></div>
+</div>
+</div>
+</div><!-- contents -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+
+
+<hr class="footer"/><address class="footer"><small>
+Generato Dom 29 Giu 2014 15:32:16 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.7.6.1
+</small></address>
+
+</body>
+</html>

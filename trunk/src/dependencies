@@ -1,0 +1,7 @@
+hud.o: hud.cc struttura_dati.h hud.h
+input_output.o: input_output.cc struttura_dati.h
+logica_gioco.o: logica_gioco.cc struttura_dati.h logica_gioco.h raycast.h \
+ input_output.h
+main.o: main.cc struttura_dati.h input_output.h raycast.h logica_gioco.h \
+ hud.h
+raycast.o: raycast.cc struttura_dati.h raycast.h
