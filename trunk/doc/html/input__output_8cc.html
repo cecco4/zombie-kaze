@@ -270,6 +270,16 @@ Funzioni</h2></td></tr>
 
 <p>Carica la mappa da un file .map in "data/mappe" in una matrice statica, ritornando il tutto in uno struct <a class="el" href="structmappa__dat.html" title="Struttura contenente i dati della mappa.">mappa_dat</a>. </p>
 <p>il nome del file da aprire viene composto ricevendo un carattere passato alla funzione, quindi se la chiamata è: carica_mappa('4'); apre il file "lv4.map", se non lo trova il puntatore alla matrice è NULL, e sarà compito di <a class="el" href="logica__gioco_8h.html#a94fbd20a9789e138480b6dde559d4cd6" title="Dato un livello, carica tutto il necessario affinchè si possa giocare su quel livello.">carica_ambiente</a> rilevare l'errore.</p>
+<p>I file .map contengono tutte le informazioni necessarie per posizionare le texture nell'ambiente pseudo-3d. Essi sono strutturati secondo il seguente schema: prima riga: dimensione lato mappa, spazio, carattere pavimento, carattere soffitto, newline. segue poi dalla seconda riga in poi la rappresenzazione della mappa, ovvero una sequenza di caratteri a ognuno dei quali corrisponde una texture, fatta eccezione per i seguenti caratteri: 0: nessuna texture P: posizione iniziale del player N: posizione di un nemico</p>
+<p>regole:</p>
+<ul>
+<li>Le mappe devono essere quadrate con dimensione del lato uguale al numero scritto nella prima riga.</li>
+<li>Le texture possono avere tutti i caratteri possibili a parte 0, P, N.</li>
+<li>Lasciare dei "buchi" verso la fine della mappa potrebbe creare effetti indesiderati.</li>
+<li>I livelli vanno in ordine da 0 a 9.</li>
+<li>I livelli devono contenere solo una P e almeno una N.</li>
+</ul>
+<p>ESEMPIO lv3.map: 5 2E 11111 2P00r r0001 e00Nb bbb12</p>
 <p>Parametri: n_mappa nome mappa da caricare </p>
 <div class="fragment"><pre class="fragment">{
         assert(n_mappa &gt;= <span class="charliteral">&#39;0&#39;</span> &amp;&amp; n_mappa&lt;= <span class="charliteral">&#39;9&#39;</span>);
@@ -502,7 +512,7 @@ Funzioni</h2></td></tr>
 <div class="memdoc">
 
 <p>controlla se ci sono tutte le texture della mappa, provando ad accedere ai file. </p>
-<p>se manca una texture ritorna -1, se ci sono tutte ritorna il numero di texture. Inoltre , per riferimento, ritorna anche un array in cui sono salvati i codici delle relative texture da disegnare nella matrice della mappa. Inserisce poi nella matrice della mappa un COD_NEM temporaneo nella posizione in cui andranno messi i nemici, tale COD_NEM varrà poi letto ed eliminato da <a class="el" href="logica__gioco_8h.html#a49b62b6dd9fd93ee0782d0277dfbe34d" title="Inizializza i campi della struttura dei nemici con oppurtuni dati.">iniz_nemici</a></p>
+<p>se manca una texture ritorna -1, se ci sono tutte ritorna il numero di texture. Inoltre , per riferimento, ritorna anche un array in cui sono salvati i codici delle relative texture da disegnare nella matrice della mappa. Inserisce poi nella matrice della mappa un numero temporaneo nella posizione in cui andranno messi i nemici, tale numero varrà poi letto ed eliminato da <a class="el" href="logica__gioco_8h.html#a49b62b6dd9fd93ee0782d0277dfbe34d" title="Inizializza i campi della struttura dei nemici con oppurtuni dati.">iniz_nemici</a></p>
 <p>Parametri: map struttura dati mappa Parametri: text_list lista texture presenti sulla mappa Parametri: nem struttura dati nemici </p>
 <div class="fragment"><pre class="fragment">{
 
@@ -706,7 +716,7 @@ Funzioni</h2></td></tr>
 
 
 <hr class="footer"/><address class="footer"><small>
-Generato Dom 29 Giu 2014 15:32:16 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
+Generato Mer 2 Lug 2014 14:42:37 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.7.6.1
 </small></address>
