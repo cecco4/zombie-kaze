@@ -7,6 +7,36 @@
   *	apre il file "lv4.map", se non lo trova il puntatore alla matrice è NULL,
   *  e sarà compito di ::carica_ambiente rilevare l'errore. 
   *
+  * I file .map contengono tutte le informazioni necessarie per posizionare
+  * le texture nell'ambiente pseudo-3d.
+  * Essi sono strutturati secondo il seguente schema:
+  * prima riga: dimensione lato mappa, spazio, carattere pavimento,
+  * 			carattere soffitto, newline.
+  * segue poi dalla seconda riga in poi la rappresenzazione della mappa,
+  * ovvero una sequenza di caratteri a ognuno dei quali corrisponde una 
+  * texture, fatta eccezione per i seguenti caratteri:
+  * 0: nessuna texture
+  * P: posizione iniziale del player
+  * N: posizione di un nemico
+  * 
+  * regole: 
+  * - Le mappe devono essere quadrate con dimensione del lato uguale al 
+  * 	numero scritto nella prima riga.
+  * - Le texture possono avere tutti i caratteri possibili a parte 0, P, N.
+  * - Lasciare dei "buchi" verso la fine della mappa potrebbe creare effetti
+  * 	indesiderati.
+  * - I livelli vanno in ordine da 0 a 9.
+  * - I livelli devono contenere solo una P e almeno una N.
+  * 
+  * ESEMPIO lv3.map:
+  * 5 2E
+  * 11111
+  * 2P00r
+  * r0001
+  * e00Nb
+  * bbb12
+  * 
+  * 
   * Parametri: n_mappa nome mappa da caricare
   */
 mappa_dat carica_mappa(char n_mappa);
@@ -26,8 +56,8 @@ void aggiorna_tasti(ALLEGRO_EVENT &ev, bool tasto[], bool set);
   *	texture.  
   * Inoltre , per riferimento, ritorna anche un array in cui sono salvati i 
   * codici delle relative texture da disegnare nella matrice della mappa.
-  * Inserisce poi nella matrice della mappa un COD_NEM temporaneo nella 
-  * posizione in cui andranno messi i nemici, tale COD_NEM varrà poi letto 
+  * Inserisce poi nella matrice della mappa un numero temporaneo nella 
+  * posizione in cui andranno messi i nemici, tale numero varrà poi letto 
   *	ed eliminato da ::iniz_nemici
   *
   * Parametri: map struttura dati mappa
