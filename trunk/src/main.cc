@@ -51,21 +51,29 @@ using namespace std;
  *
  */
 
+    //joystick    
+    bool joy = false;   /**< true se c'è il joystick*/
+    ALLEGRO_JOYSTICK *joystick = NULL;
+    ALLEGRO_JOYSTICK_STATE joystate;
+
+
 int main(void)
 {
 
 	bool done = false;
 	bool redraw = true;
+
 	
 	int errore;
 	bool caricato = false;
 
-	bool tasto[11] = {false, false, false, false, false, false, false,
-                      false, false, false, false };
+	bool tasto[12] = {false, false, false, false, false, false, false,
+                      false, false, false, false, false};
 
 	ALLEGRO_DISPLAY *display = NULL;
 	ALLEGRO_EVENT_QUEUE *event_queue = NULL;
 	ALLEGRO_TIMER *timer = NULL;
+
 
 	//inizializzo Allegro
 	if(!al_init())					
@@ -88,6 +96,17 @@ int main(void)
 	al_reserve_samples(9);
 	
 	al_install_keyboard();
+
+    if(al_install_joystick()) {
+
+        al_reconfigure_joysticks();
+        joystick=al_get_joystick(0);
+        
+        if(joystick != NULL) {        
+            cout<<"Riconosciuto joystick "<<joystick<<endl;
+            joy = true;
+        }
+    }
 	
 	//font
 	cout<<"Caricamento: data/ZOMBIE.TTF    ";
@@ -141,6 +160,8 @@ int main(void)
 	al_register_event_source(event_queue, al_get_keyboard_event_source());
 	al_register_event_source(event_queue, al_get_display_event_source(display));
 	al_register_event_source(event_queue, al_get_timer_event_source(timer));
+    if(joy)
+        al_register_event_source(event_queue, al_get_joystick_event_source());
 
 	al_start_timer(timer);
 	//GAME LOOP:
@@ -148,13 +169,16 @@ int main(void)
 	{
 		ALLEGRO_EVENT ev;
 		al_wait_for_event(event_queue, &ev);
+        
+        if(joy)
+            al_get_joystick_state(joystick, &joystate);
 
 		if(ev.type == ALLEGRO_EVENT_KEY_DOWN)
 			aggiorna_tasti(ev, tasto, true);
 			 
 		else if(ev.type == ALLEGRO_EVENT_KEY_UP)
 			aggiorna_tasti(ev, tasto, false);
-			 
+		 
 		else if(ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
 		{
 			done = true;
@@ -167,9 +191,14 @@ int main(void)
 				}
 			#endif
 		
-			//update
+            //update
+            if(joy) 
+                tasto[INVIO] = joystate.button[0];
+
+            
 			switch (stato_gioco) {
-			
+        
+        			
 			case CARICA:
 				if (!caricato) {
 					errore = carica_ambiente(	livello, map, texture, player, 
@@ -200,16 +229,14 @@ int main(void)
 					anim_titolo(titolo, sfondo, stato_gioco, livello);
 			
 				muovi_player(player, map, tasto, audio);
-				anim_pistola(pistola);
+				
 				gestisci_sparo(player, nemici, pistola, tasto, audio);
+                anim_pistola(pistola);
 
 				muovi_nemici(player, map, nemici);
 				anima_nemici(nemici);
 				stato_gioco = controlla_stato_nemici(nemici, audio);
 				
-				if (tasto[SPAZIO] && tasto[INVIO] && tasto[SU])
-					stato_gioco = CARICA;
-					
 				if (stato_gioco == CARICA) {
 					al_stop_sample(&audio.m_id);
 					
@@ -224,6 +251,7 @@ int main(void)
 										ALLEGRO_PLAYMODE_ONCE, NULL);
 					}
 					livello++;
+                    pistola.tmax -= 5;
 					dealloca_ambiente(map, texture, nemici, pistola);
 					caricato = false;
 					titolo.angle = sfondo.angle = 0;
@@ -235,8 +263,12 @@ int main(void)
 			case GAME_OVER:
 				gameover.alpha < 255? gameover.alpha+=5 : gameover.alpha = 255;
 				
-				if (tasto[INVIO])	
-					done= true;
+				if (tasto[INVIO]) {	
+					stato_gioco = CARICA;
+                    livello='0'; 
+                    dealloca_ambiente(map, texture, nemici, pistola);     
+                    caricato = false;          
+                }
 				break;
 			}
 			

@@ -28,7 +28,7 @@ const double dist_schermo = (lschermo/2) /  tan(FOV/2* M_PI / 180.0);
 enum STATO { CARICA, PLAY, GAME_OVER };
 
 /** Valori utilizzati dall'array tasto (nel ::main) */
-enum TASTI{ SU, GIU, SX, DX, SPAZIO, INVIO, P, A, D, W, S};
+enum TASTI{ SU, GIU, SX, DX, SPAZIO, INVIO, P, A, D, W, S, JOYA};
 
 /** Stati dell'animazione della pistola */
 enum ANIM_PIST { FERMO , CAMMINA, SPARA };
@@ -131,7 +131,8 @@ struct pistola_dat {
 	int img_l;			 /**< Larghezza immagine         */
 	int img_h;			 /**< Altezza immagine           */
 	int frame_l;		 /**< Larghezza frame            */
-	
+	    
+    bool sparato;        /**< Proiettile sparato?        */
 
 	int t;     /**< Tempo attuale dello sparo            */
 	int tmax;  /**< Tempo minimo tra uno sparo e l'altro */

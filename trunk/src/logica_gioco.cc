@@ -15,6 +15,11 @@
 
 using namespace std;
 
+    //joystick    
+    extern bool joy;
+    extern ALLEGRO_JOYSTICK *joystick;
+    extern ALLEGRO_JOYSTICK_STATE joystate;
+
 /** Struttura contenente i dati dei nodi utilizzati nel ::pathfinding */
 struct nodo {
     int x;
@@ -140,7 +145,7 @@ bool iniz_pistola (pistola_dat &pist)
     pist.y = hschermo - pist.img_h;
     
     pist.t=0;
-    pist.tmax = 35; 
+    pist.tmax = 53; 
     pist.danno = 80;
     
     cout<<"Caricamento: data/sprite/pistola.png    ";
@@ -150,6 +155,8 @@ bool iniz_pistola (pistola_dat &pist)
         return false;
     } else
         cout<<"OK\n";
+
+    pist.sparato = false;
         
     pist.img = img;
     pist.img_l = 400;
@@ -162,7 +169,7 @@ bool iniz_pistola (pistola_dat &pist)
     pist.FERMO_vel =0.05;    
     pist.CAMMINA_off =20;
     pist.CAMMINA_vel = 1;
-    pist.t_SPARA = 15;
+    pist.t_SPARA = 20;
     
 
     return true;
@@ -175,14 +182,24 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
     static int tmp_passo =0;
     tmp_passo++;
 
+    double newx, newy, xx, yy;
+
     //cammina avanti
-    double newx = pl.x + cos(rad(pl.ang))*pl.raggio_collisione;
-    double newy = pl.y - sin(rad(pl.ang))*pl.raggio_collisione;
+    newx = pl.x + cos(rad(pl.ang))*pl.raggio_collisione;
+    newy = pl.y - sin(rad(pl.ang))*pl.raggio_collisione;
 
-    double xx = pl.x + pl.vel_camminata* cos(rad(pl.ang))*tasto[W];
-    double yy = pl.y - pl.vel_camminata* sin(rad(pl.ang))*tasto[W];    
+    if(!joy) {
+        xx = pl.x + pl.vel_camminata* cos(rad(pl.ang))*tasto[W];
+        yy = pl.y - pl.vel_camminata* sin(rad(pl.ang))*tasto[W];    
+    } else {
+        //avanti
+        float axis = joystate.stick[0].axis[1];
+        axis>-0.3? axis = 0, tasto[W] = false : tasto[W] = true;
+        axis*= -1;
 
-
+        xx = pl.x + pl.vel_camminata* cos(rad(pl.ang))*axis;
+        yy = pl.y - pl.vel_camminata* sin(rad(pl.ang))*axis;          
+    }
 
     if (map.data[int(pl.y/map.u)][int(newx/map.u)] == 0)
         pl.x = xx;
@@ -190,12 +207,20 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
         pl.y = yy;
 
 
-    //cammina indietro
+    //cammina indietro  
     newx = pl.x - cos(rad(pl.ang))*pl.raggio_collisione;
     newy = pl.y + sin(rad(pl.ang))*pl.raggio_collisione;
 
-    xx = pl.x - pl.vel_camminata* cos(rad(pl.ang))*tasto[S];
-    yy = pl.y + pl.vel_camminata* sin(rad(pl.ang))*tasto[S];
+    if(!joy) {
+        xx = pl.x - pl.vel_camminata* cos(rad(pl.ang))*tasto[S];
+        yy = pl.y + pl.vel_camminata* sin(rad(pl.ang))*tasto[S];
+    } else {
+        //indietro
+        double axis = joystate.stick[0].axis[1];
+        axis<0.3? axis = 0, tasto[S] = false : tasto[S] = true;
+        xx = pl.x - pl.vel_camminata* cos(rad(pl.ang))*axis;
+        yy = pl.y + pl.vel_camminata* sin(rad(pl.ang))*axis;          
+    }
 
     if (map.data[int(pl.y/map.u)][int(newx/map.u)] == 0)
         pl.x = xx;
@@ -209,9 +234,16 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
     //cammina sinistra
     newx = pl.x + cos(rad(pl.ang+90))*pl.raggio_collisione;
     newy = pl.y - sin(rad(pl.ang+90))*pl.raggio_collisione;
-
-    xx = pl.x + pl.vel_camminata* cos(rad(pl.ang+90))*tasto[A];
-    yy = pl.y - pl.vel_camminata* sin(rad(pl.ang+90))*tasto[A];    
+    
+    if(!joy) {
+        xx = pl.x + pl.vel_camminata* cos(rad(pl.ang+90))*tasto[A];
+        yy = pl.y - pl.vel_camminata* sin(rad(pl.ang+90))*tasto[A];    
+    } else {
+        double axis = joystate.stick[0].axis[0];
+        axis>-0.3? axis = 0, tasto[A] = false : tasto[A] = true;   
+        xx = pl.x - pl.vel_camminata* cos(rad(pl.ang+90))*axis;
+        yy = pl.y + pl.vel_camminata* sin(rad(pl.ang+90))*axis;
+    }
 
 
 
@@ -225,9 +257,16 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
     newx = pl.x + cos(rad(pl.ang-90))*pl.raggio_collisione;
     newy = pl.y - sin(rad(pl.ang-90))*pl.raggio_collisione;
 
-    xx = pl.x + pl.vel_camminata* cos(rad(pl.ang-90))*tasto[D];
-    yy = pl.y - pl.vel_camminata* sin(rad(pl.ang-90))*tasto[D];    
-
+    if(!joy) {
+        xx = pl.x + pl.vel_camminata* cos(rad(pl.ang-90))*tasto[D];
+        yy = pl.y - pl.vel_camminata* sin(rad(pl.ang-90))*tasto[D]; 
+    
+    } else {
+        double axis = joystate.stick[0].axis[0];
+        axis<0.3? axis = 0, tasto[D] = false : tasto[D] = true; 
+        xx = pl.x + pl.vel_camminata* cos(rad(pl.ang-90))*axis;
+        yy = pl.y - pl.vel_camminata* sin(rad(pl.ang-90))*axis;
+    }
 
 
     if (map.data[int(pl.y/map.u)][int(newx/map.u)] == 0)
@@ -236,18 +275,27 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
         pl.y = yy;
 
     //si gira
-    pl.ang += tasto[SX] * pl.vel_gira;
-    pl.ang -= tasto[DX] * pl.vel_gira;
+    if(!joy) {
+        pl.ang += tasto[SX] * pl.vel_gira;
+        pl.ang -= tasto[DX] * pl.vel_gira;
+    } else {
+        double axis = joystate.stick[1].axis[1];
+        axis > -0.3 && axis < 0.3? axis=0 : axis;
+        pl.ang -= axis * pl.vel_gira;
+    }
     pl.ang = to_360(pl.ang);
     
     assert(pl.ang >= 0 && pl.ang <= 360);
     
     //suono passi
-    if (tmp_passo > 20 && (tasto[W] ^ tasto[S]) ) {
+    if (tmp_passo > 20 && (tasto[W] || tasto[S] || tasto[A] || tasto[D]) ) {
         al_play_sample(audio.passo, 1.0, 0, 1, ALLEGRO_PLAYMODE_ONCE, NULL);
         tmp_passo = 0;
     }
     assert(tmp_passo>= 0 );    
+
+
+
 }
 
 
@@ -258,9 +306,19 @@ void gestisci_sparo (    player_dat &pl, nemici_dat &nem, pistola_dat &pist,
     //tempistiche pistola
     pist.t<pist.tmax ? pist.t++ : pist.t;
 
+    if(joy) { 
+        if(joystate.stick[2].axis[1] == 1)
+            tasto[SPAZIO]= true;
+        else
+            tasto[SPAZIO]= false;
+    }
+    
+
     if (tasto[SPAZIO] && pist.t >= pist.tmax) {
         pist.stato_anim = SPARA;
-        
+        pist.sparato = true;
+                
+
         al_play_sample(audio.pistola, 1.0, 0, 1, ALLEGRO_PLAYMODE_ONCE, NULL);
         
         //distanze nemici in collisione
@@ -302,7 +360,7 @@ void gestisci_sparo (    player_dat &pl, nemici_dat &nem, pistola_dat &pist,
     
     //animazione pistola
     if (pist.stato_anim != SPARA) {
-        if (tasto[W] ^ tasto[S])
+        if (tasto[W] ^ tasto[S] ^ tasto[A] ^ tasto[D])
             pist.stato_anim = CAMMINA;
         else
             pist.stato_anim = FERMO;
