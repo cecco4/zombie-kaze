@@ -175,13 +175,14 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
     static int tmp_passo =0;
     tmp_passo++;
 
+    //cammina avanti
     double newx = pl.x + cos(rad(pl.ang))*pl.raggio_collisione;
     double newy = pl.y - sin(rad(pl.ang))*pl.raggio_collisione;
 
-    double xx = pl.x + pl.vel_camminata* cos(rad(pl.ang))*tasto[SU];
-    double yy = pl.y - pl.vel_camminata* sin(rad(pl.ang))*tasto[SU];    
+    double xx = pl.x + pl.vel_camminata* cos(rad(pl.ang))*tasto[W];
+    double yy = pl.y - pl.vel_camminata* sin(rad(pl.ang))*tasto[W];    
 
-    //cammina avanti
+
 
     if (map.data[int(pl.y/map.u)][int(newx/map.u)] == 0)
         pl.x = xx;
@@ -193,8 +194,8 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
     newx = pl.x - cos(rad(pl.ang))*pl.raggio_collisione;
     newy = pl.y + sin(rad(pl.ang))*pl.raggio_collisione;
 
-    xx = pl.x - pl.vel_camminata* cos(rad(pl.ang))*tasto[GIU];
-    yy = pl.y + pl.vel_camminata* sin(rad(pl.ang))*tasto[GIU];
+    xx = pl.x - pl.vel_camminata* cos(rad(pl.ang))*tasto[S];
+    yy = pl.y + pl.vel_camminata* sin(rad(pl.ang))*tasto[S];
 
     if (map.data[int(pl.y/map.u)][int(newx/map.u)] == 0)
         pl.x = xx;
@@ -204,6 +205,36 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
     assert(    pl.x > 0 && pl.x < map.dim*map.u && 
             pl.y > 0 && pl.y < map.dim*map.u    );
 
+
+    //cammina sinistra
+    newx = pl.x + cos(rad(pl.ang+90))*pl.raggio_collisione;
+    newy = pl.y - sin(rad(pl.ang+90))*pl.raggio_collisione;
+
+    xx = pl.x + pl.vel_camminata* cos(rad(pl.ang+90))*tasto[A];
+    yy = pl.y - pl.vel_camminata* sin(rad(pl.ang+90))*tasto[A];    
+
+
+
+    if (map.data[int(pl.y/map.u)][int(newx/map.u)] == 0)
+        pl.x = xx;
+    if (map.data[int(newy/map.u)][int(pl.x/map.u)] == 0)
+        pl.y = yy;
+
+
+    //cammina destra
+    newx = pl.x + cos(rad(pl.ang-90))*pl.raggio_collisione;
+    newy = pl.y - sin(rad(pl.ang-90))*pl.raggio_collisione;
+
+    xx = pl.x + pl.vel_camminata* cos(rad(pl.ang-90))*tasto[D];
+    yy = pl.y - pl.vel_camminata* sin(rad(pl.ang-90))*tasto[D];    
+
+
+
+    if (map.data[int(pl.y/map.u)][int(newx/map.u)] == 0)
+        pl.x = xx;
+    if (map.data[int(newy/map.u)][int(pl.x/map.u)] == 0)
+        pl.y = yy;
+
     //si gira
     pl.ang += tasto[SX] * pl.vel_gira;
     pl.ang -= tasto[DX] * pl.vel_gira;
@@ -212,7 +243,7 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
     assert(pl.ang >= 0 && pl.ang <= 360);
     
     //suono passi
-    if (tmp_passo > 20 && (tasto[SU] ^ tasto[GIU]) ) {
+    if (tmp_passo > 20 && (tasto[W] ^ tasto[S]) ) {
         al_play_sample(audio.passo, 1.0, 0, 1, ALLEGRO_PLAYMODE_ONCE, NULL);
         tmp_passo = 0;
     }
@@ -271,7 +302,7 @@ void gestisci_sparo (    player_dat &pl, nemici_dat &nem, pistola_dat &pist,
     
     //animazione pistola
     if (pist.stato_anim != SPARA) {
-        if (tasto[SU] ^ tasto[GIU])
+        if (tasto[W] ^ tasto[S])
             pist.stato_anim = CAMMINA;
         else
             pist.stato_anim = FERMO;

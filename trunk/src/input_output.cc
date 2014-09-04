@@ -257,6 +257,18 @@ void aggiorna_tasti(ALLEGRO_EVENT &ev, bool tasto[], bool set)
 				case ALLEGRO_KEY_P:
 					tasto[P] = set;
 					break;
+				case ALLEGRO_KEY_A:
+					tasto[A] = set;
+					break;
+				case ALLEGRO_KEY_D:
+					tasto[D] = set;
+					break;
+				case ALLEGRO_KEY_W:
+					tasto[W] = set;
+					break;
+				case ALLEGRO_KEY_S:
+					tasto[S] = set;
+					break;
 			}
 }			
 		

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['a',['A',['../struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca42a4ade1acd55a49164099104990e09f',1,'struttura_dati.h']]],
   ['aggiorna_5ftasti',['aggiorna_tasti',['../input__output_8cc.html#a85af57e0be1130f14f75c2697ea0472a',1,'aggiorna_tasti(ALLEGRO_EVENT &amp;ev, bool tasto[], bool set):&#160;input_output.cc'],['../input__output_8h.html#a85af57e0be1130f14f75c2697ea0472a',1,'aggiorna_tasti(ALLEGRO_EVENT &amp;ev, bool tasto[], bool set):&#160;input_output.cc']]],
   ['alpha',['alpha',['../structimmagine__dat.html#ae585864d613bb72c554efddaaa43b9ac',1,'immagine_dat']]],
   ['alpha_5fcmp',['alpha_cmp',['../raycast_8cc.html#aa15f09960181b3e9f70492ff01c2bb81',1,'raycast.cc']]],

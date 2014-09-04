@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['s',['S',['../struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959caf1ce01387d2348f8b858721a7db81670',1,'struttura_dati.h']]],
   ['setta_5fposizione_5farrivo',['setta_posizione_arrivo',['../logica__gioco_8cc.html#abdafa4e03b5fb13bfc7e8f2bc36dfad7',1,'logica_gioco.cc']]],
   ['simuove',['simuove',['../structnemico__dat.html#a015b037400bc28215ce12ddc08f0ee1a',1,'nemico_dat']]],
   ['sinistra',['sinistra',['../logica__gioco_8cc.html#a77d32c22115115152439406d75895b2da898515c7bcad93969fef96b0b8247719',1,'logica_gioco.cc']]],
@@ -12,7 +13,7 @@ var searchData=
   ['stato',['STATO',['../struttura__dati_8h.html#af62f0f35361858927524f5221f98b53b',1,'struttura_dati.h']]],
   ['stato_5fanim',['stato_anim',['../structpistola__dat.html#a133a157165b5692f784a79a9826dad31',1,'pistola_dat']]],
   ['struttura_5fdati_2eh',['struttura_dati.h',['../struttura__dati_8h.html',1,'']]],
-  ['su',['su',['../logica__gioco_8cc.html#a77d32c22115115152439406d75895b2da993c8ae02a4eb216e79975d9c4b30ba7',1,'su():&#160;logica_gioco.cc'],['../struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca7911229e7fd613f96aeaf9413c8251bc',1,'SU():&#160;struttura_dati.h']]],
+  ['su',['SU',['../struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca7911229e7fd613f96aeaf9413c8251bc',1,'SU():&#160;struttura_dati.h'],['../logica__gioco_8cc.html#a77d32c22115115152439406d75895b2da993c8ae02a4eb216e79975d9c4b30ba7',1,'su():&#160;logica_gioco.cc']]],
   ['succ',['succ',['../structnodo.html#a96e7be119f4e64c85efc57d7616ade85',1,'nodo']]],
   ['sx',['SX',['../struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca898fd7abd6aae10a03fc8f61543e1ab6',1,'struttura_dati.h']]]
 ];
