@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['d',['D',['../struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca77a6b11f9898c052926f1d49765861e8',1,'struttura_dati.h']]],
   ['danno',['danno',['../structpistola__dat.html#aca178c4c1807973f79d5060210ec7e90',1,'pistola_dat']]],
   ['data',['data',['../structmappa__dat.html#aa8812a67b74b6433219812c8b95ae2cb',1,'mappa_dat']]],
   ['dealloca_5fambiente',['dealloca_ambiente',['../logica__gioco_8cc.html#a7fd7bc554e7d7ad0e9fb5b9017b012d1',1,'dealloca_ambiente(mappa_dat &amp;map, texture_dat *&amp;texture, nemici_dat &amp;nemici, pistola_dat &amp;pistola):&#160;logica_gioco.cc'],['../logica__gioco_8h.html#a7fd7bc554e7d7ad0e9fb5b9017b012d1',1,'dealloca_ambiente(mappa_dat &amp;map, texture_dat *&amp;texture, nemici_dat &amp;nemici, pistola_dat &amp;pistola):&#160;logica_gioco.cc']]],

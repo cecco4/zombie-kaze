@@ -60,7 +60,8 @@ int main(void)
 	int errore;
 	bool caricato = false;
 
-	bool tasto[7] = {false, false, false, false, false, false, false};
+	bool tasto[11] = {false, false, false, false, false, false, false,
+                      false, false, false, false };
 
 	ALLEGRO_DISPLAY *display = NULL;
 	ALLEGRO_EVENT_QUEUE *event_queue = NULL;

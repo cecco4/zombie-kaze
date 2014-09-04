@@ -28,7 +28,7 @@ const double dist_schermo = (lschermo/2) /  tan(FOV/2* M_PI / 180.0);
 enum STATO { CARICA, PLAY, GAME_OVER };
 
 /** Valori utilizzati dall'array tasto (nel ::main) */
-enum TASTI{ SU, GIU, SX, DX, SPAZIO, INVIO, P};
+enum TASTI{ SU, GIU, SX, DX, SPAZIO, INVIO, P, A, D, W, S};
 
 /** Stati dell'animazione della pistola */
 enum ANIM_PIST { FERMO , CAMMINA, SPARA };
