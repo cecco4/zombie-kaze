@@ -3,6 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
 <title>Zombie-Kaze:  File sorgente raycast.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -29,7 +30,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generato da Doxygen 1.8.1.2 -->
+<!-- Generato da Doxygen 1.8.6 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
@@ -83,28 +84,40 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </div><!--header-->
 <div class="contents">
 <a href="raycast_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">double</span> <a class="code" href="raycast_8cc.html#a5b4615cd4bb62c1c29dfd7e3bb2a3739" title="Dato un numero lo riporta ad un intervallo fra 0 e 360.">to_360</a> (<span class="keywordtype">double</span> ang);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keywordtype">double</span> <a class="code" href="raycast_8h.html#a5b4615cd4bb62c1c29dfd7e3bb2a3739">to_360</a> (<span class="keywordtype">double</span> ang);</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">double</span> <a class="code" href="raycast_8cc.html#ac2200150c9f43d15c533f992f37b5f96" title="Dato un angolo in gradi lo converte in radianti.">rad</a> (<span class="keywordtype">double</span> ang);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">double</span> <a class="code" href="raycast_8h.html#ac2200150c9f43d15c533f992f37b5f96">rad</a> (<span class="keywordtype">double</span> ang);</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">double</span> <a class="code" href="raycast_8cc.html#a8d44f8f8e008d0cde33d2c3d6977f62f" title="Dato un angolo in radianti lo converte in gradi.">grad</a> (<span class="keywordtype">double</span> ang);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">double</span> <a class="code" href="raycast_8h.html#a8d44f8f8e008d0cde33d2c3d6977f62f">grad</a> (<span class="keywordtype">double</span> ang);</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="raycast_8cc.html#a90e8e16b79daf4b918e5535a026e57ed" title="Funzione principale per quanto concerne la grafica del gioco.">raycast</a> (  <a class="code" href="structplayer__dat.html" title="Struttura contenente i dati del giocatore.">player_dat</a> &amp;pl, <a class="code" href="structnemici__dat.html" title="Struttura contenente i dati di tutti i nemici sulla mappa.">nemici_dat</a> &amp;nem, <a class="code" href="structmappa__dat.html" title="Struttura contenente i dati della mappa.">mappa_dat</a> &amp;map, </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                <a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> *texture, ALLEGRO_COLOR render[][<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>]  );</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">void</span> <a class="code" href="raycast_8h.html#a90e8e16b79daf4b918e5535a026e57ed">raycast</a> (  <a class="code" href="structplayer__dat.html">player_dat</a> &amp;pl, <a class="code" href="structnemici__dat.html">nemici_dat</a> &amp;nem, <a class="code" href="structmappa__dat.html">mappa_dat</a> &amp;map, </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                <a class="code" href="structtexture__dat.html">texture_dat</a> *texture, ALLEGRO_COLOR render[][<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b">lschermo</a>]  );</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> <a class="code" href="raycast_8cc.html#a04851c30cecc4ffff04b48e05531f231" title="Pulisce la matrice utilizzata per il rendering, preparandola quindi ad essere plasmata da raycast...">pulisci_render_matrix</a>(ALLEGRO_COLOR render_matrix[<a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf" title="Altezza dello schermo.">hschermo</a>][<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>]);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keywordtype">void</span> <a class="code" href="raycast_8h.html#a04851c30cecc4ffff04b48e05531f231">pulisci_render_matrix</a>(ALLEGRO_COLOR render_matrix[<a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf">hschermo</a>][<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b">lschermo</a>]);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> <a class="code" href="raycast_8cc.html#aa247b5ff21e7bf49cfb5e87c2db6fc99" title="Trasforma la matrice di colori in immagine che verrà poi disegnata sul display dal main...">applica_render_matrix</a>( ALLEGRO_COLOR render_matrix[<a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf" title="Altezza dello schermo.">hschermo</a>][<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>],</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keywordtype">void</span> <a class="code" href="raycast_8h.html#aa247b5ff21e7bf49cfb5e87c2db6fc99">applica_render_matrix</a>( ALLEGRO_COLOR render_matrix[<a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf">hschermo</a>][<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b">lschermo</a>],</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                                                        ALLEGRO_BITMAP *rendering);</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="ttc" id="structtexture__dat_html"><div class="ttname"><a href="structtexture__dat.html">texture_dat</a></div><div class="ttdoc">Struttura contenente i dati di una texture. </div><div class="ttdef"><b>Definition:</b> struttura_dati.h:86</div></div>
+<div class="ttc" id="structplayer__dat_html"><div class="ttname"><a href="structplayer__dat.html">player_dat</a></div><div class="ttdoc">Struttura contenente i dati del giocatore. </div><div class="ttdef"><b>Definition:</b> struttura_dati.h:38</div></div>
+<div class="ttc" id="raycast_8h_html_aa247b5ff21e7bf49cfb5e87c2db6fc99"><div class="ttname"><a href="raycast_8h.html#aa247b5ff21e7bf49cfb5e87c2db6fc99">applica_render_matrix</a></div><div class="ttdeci">void applica_render_matrix(ALLEGRO_COLOR render_matrix[hschermo][lschermo], ALLEGRO_BITMAP *rendering)</div><div class="ttdoc">Trasforma la matrice di colori in immagine che verrà poi disegnata sul display dal main...</div><div class="ttdef"><b>Definition:</b> raycast.cc:319</div></div>
+<div class="ttc" id="struttura__dati_8h_html_af660130ebbf343c65c1bdcbb8fa23cbf"><div class="ttname"><a href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf">hschermo</a></div><div class="ttdeci">const int hschermo</div><div class="ttdoc">Altezza dello schermo. </div><div class="ttdef"><b>Definition:</b> struttura_dati.h:14</div></div>
+<div class="ttc" id="structnemici__dat_html"><div class="ttname"><a href="structnemici__dat.html">nemici_dat</a></div><div class="ttdoc">Struttura contenente i dati di tutti i nemici sulla mappa. </div><div class="ttdef"><b>Definition:</b> struttura_dati.h:117</div></div>
+<div class="ttc" id="structmappa__dat_html"><div class="ttname"><a href="structmappa__dat.html">mappa_dat</a></div><div class="ttdoc">Struttura contenente i dati della mappa. </div><div class="ttdef"><b>Definition:</b> struttura_dati.h:59</div></div>
+<div class="ttc" id="raycast_8h_html_a04851c30cecc4ffff04b48e05531f231"><div class="ttname"><a href="raycast_8h.html#a04851c30cecc4ffff04b48e05531f231">pulisci_render_matrix</a></div><div class="ttdeci">void pulisci_render_matrix(ALLEGRO_COLOR render_matrix[hschermo][lschermo])</div><div class="ttdoc">Pulisce la matrice utilizzata per il rendering, preparandola quindi ad essere plasmata da raycast...</div><div class="ttdef"><b>Definition:</b> raycast.cc:308</div></div>
+<div class="ttc" id="raycast_8h_html_a5b4615cd4bb62c1c29dfd7e3bb2a3739"><div class="ttname"><a href="raycast_8h.html#a5b4615cd4bb62c1c29dfd7e3bb2a3739">to_360</a></div><div class="ttdeci">double to_360(double ang)</div><div class="ttdoc">Dato un numero lo riporta ad un intervallo fra 0 e 360. </div><div class="ttdef"><b>Definition:</b> raycast.cc:39</div></div>
+<div class="ttc" id="raycast_8h_html_a90e8e16b79daf4b918e5535a026e57ed"><div class="ttname"><a href="raycast_8h.html#a90e8e16b79daf4b918e5535a026e57ed">raycast</a></div><div class="ttdeci">void raycast(player_dat &amp;pl, nemici_dat &amp;nem, mappa_dat &amp;map, texture_dat *texture, ALLEGRO_COLOR render[][lschermo])</div><div class="ttdoc">Funzione principale per quanto concerne la grafica del gioco. </div><div class="ttdef"><b>Definition:</b> raycast.cc:61</div></div>
+<div class="ttc" id="raycast_8h_html_ac2200150c9f43d15c533f992f37b5f96"><div class="ttname"><a href="raycast_8h.html#ac2200150c9f43d15c533f992f37b5f96">rad</a></div><div class="ttdeci">double rad(double ang)</div><div class="ttdoc">Dato un angolo in gradi lo converte in radianti. </div><div class="ttdef"><b>Definition:</b> raycast.cc:48</div></div>
+<div class="ttc" id="raycast_8h_html_a8d44f8f8e008d0cde33d2c3d6977f62f"><div class="ttname"><a href="raycast_8h.html#a8d44f8f8e008d0cde33d2c3d6977f62f">grad</a></div><div class="ttdeci">double grad(double ang)</div><div class="ttdoc">Dato un angolo in radianti lo converte in gradi. </div><div class="ttdef"><b>Definition:</b> raycast.cc:54</div></div>
+<div class="ttc" id="struttura__dati_8h_html_a0784cd492c479dda0e0cb343eb420c0b"><div class="ttname"><a href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b">lschermo</a></div><div class="ttdeci">const int lschermo</div><div class="ttdoc">Larghezza dello schermo. </div><div class="ttdef"><b>Definition:</b> struttura_dati.h:13</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generato Gio 4 Set 2014 14:56:29 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
+Generato Gio 4 Set 2014 22:46:20 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.1.2
+</a> 1.8.6
 </small></address>
 </body>
 </html>

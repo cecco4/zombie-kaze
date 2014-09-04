@@ -12,6 +12,8 @@
 
 using namespace std;
 
+    extern bool joy;
+
 void anim_pistola(pistola_dat &pist) {
 
 	static float anim = pist.FERMO_off;  //animazione su giù della pistola 
@@ -25,6 +27,12 @@ void anim_pistola(pistola_dat &pist) {
 	float x = lschermo/2 - pist.frame_l/2 - 18;
 	float y = hschermo - pist.img_h;
 	
+    if(pist.sparato) {
+        pist.frame = 1;
+        tempo = 2;
+        pist.sparato = false;
+        avanti = true;
+    }
 
 	switch (pist.stato_anim) {
 		case FERMO:
@@ -129,7 +137,6 @@ void disegna_titolo(immagine_dat &titolo, immagine_dat &sfondo)
 
 	al_draw_scaled_rotated_bitmap(titolo.img, titolo.l/2, titolo.h/2, 
 		titolo.x, titolo.y, titolo.sizex, titolo.sizey, titolo.angle, 0);
-
 }	
 
 			
