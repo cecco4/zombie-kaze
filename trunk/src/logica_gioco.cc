@@ -236,8 +236,8 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
     newy = pl.y - sin(rad(pl.ang+90))*pl.raggio_collisione;
     
     if(!joy) {
-        xx = pl.x + pl.vel_camminata* cos(rad(pl.ang+90))*tasto[A];
-        yy = pl.y - pl.vel_camminata* sin(rad(pl.ang+90))*tasto[A];    
+        xx = pl.x + pl.vel_camminata/1.5* cos(rad(pl.ang+90))*tasto[A];
+        yy = pl.y - pl.vel_camminata/1.5* sin(rad(pl.ang+90))*tasto[A];    
     } else {
         double axis = joystate.stick[0].axis[0];
         axis>-0.3? axis = 0, tasto[A] = false : tasto[A] = true;   
@@ -258,8 +258,8 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
     newy = pl.y - sin(rad(pl.ang-90))*pl.raggio_collisione;
 
     if(!joy) {
-        xx = pl.x + pl.vel_camminata* cos(rad(pl.ang-90))*tasto[D];
-        yy = pl.y - pl.vel_camminata* sin(rad(pl.ang-90))*tasto[D]; 
+        xx = pl.x + pl.vel_camminata/1.5* cos(rad(pl.ang-90))*tasto[D];
+        yy = pl.y - pl.vel_camminata/1.5* sin(rad(pl.ang-90))*tasto[D]; 
     
     } else {
         double axis = joystate.stick[0].axis[0];
