@@ -360,7 +360,7 @@ void gestisci_sparo (    player_dat &pl, nemici_dat &nem, pistola_dat &pist,
     
     //animazione pistola
     if (pist.stato_anim != SPARA) {
-        if (tasto[W] ^ tasto[S] ^ tasto[A] ^ tasto[D])
+        if (tasto[W] || tasto[S] || tasto[A] || tasto[D])
             pist.stato_anim = CAMMINA;
         else
             pist.stato_anim = FERMO;

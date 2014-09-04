@@ -261,13 +261,16 @@ int main(void)
 			break;
 			
 			case GAME_OVER:
+                static int wait=0;
+                wait++;
 				gameover.alpha < 255? gameover.alpha+=5 : gameover.alpha = 255;
 				
-				if (tasto[INVIO]) {	
+				if (wait>700 && tasto[INVIO]) {	
 					stato_gioco = CARICA;
                     livello='0'; 
                     dealloca_ambiente(map, texture, nemici, pistola);     
-                    caricato = false;          
+                    caricato = false;
+                    wait=0;          
                 }
 				break;
 			}
