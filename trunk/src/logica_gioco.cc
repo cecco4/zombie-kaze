@@ -175,24 +175,31 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
 	static int tmp_passo =0;
 	tmp_passo++;
 
-	//cammina avanti
-	if (pl.dist_m< pl.raggio_collisione) {
-		pl.x = pl.x - fabs(pl.raggio_collisione-pl.dist_m)* cos(rad(pl.ang));
-		pl.y = pl.y + fabs(pl.raggio_collisione-pl.dist_m)* sin(rad(pl.ang));
-	} 
-	pl.x = pl.x + pl.vel_camminata* cos(rad(pl.ang))*tasto[SU];
-	pl.y = pl.y - pl.vel_camminata* sin(rad(pl.ang))*tasto[SU];			
+	double newx = pl.x + cos(rad(pl.ang))*pl.raggio_collisione;
+	double newy = pl.y - sin(rad(pl.ang))*pl.raggio_collisione;
 
+    double xx = pl.x + pl.vel_camminata* cos(rad(pl.ang))*tasto[SU];
+    double yy = pl.y - pl.vel_camminata* sin(rad(pl.ang))*tasto[SU];	
+
+	//cammina avanti
+
+	if (map.data[int(pl.y/map.u)][int(newx/map.u)] == 0)
+        pl.x = xx;
+	if (map.data[int(newy/map.u)][int(pl.x/map.u)] == 0)
+        pl.y = yy;
 
 
 	//cammina indietro
-	double newx = pl.x - cos(rad(pl.ang))*pl.raggio_collisione;
-	double newy = pl.y + sin(rad(pl.ang))*pl.raggio_collisione;
+	newx = pl.x - cos(rad(pl.ang))*pl.raggio_collisione;
+	newy = pl.y + sin(rad(pl.ang))*pl.raggio_collisione;
 
-	if (map.data[int(newy/map.u)][int(newx/map.u)] == 0) { 
-		pl.x = pl.x - pl.vel_camminata* cos(rad(pl.ang))*tasto[GIU];
-		pl.y = pl.y + pl.vel_camminata* sin(rad(pl.ang))*tasto[GIU];
-	}
+    xx = pl.x - pl.vel_camminata* cos(rad(pl.ang))*tasto[GIU];
+    yy = pl.y + pl.vel_camminata* sin(rad(pl.ang))*tasto[GIU];
+
+	if (map.data[int(pl.y/map.u)][int(newx/map.u)] == 0)
+        pl.x = xx;
+	if (map.data[int(newy/map.u)][int(pl.x/map.u)] == 0)
+        pl.y = yy;
 
 	assert(	pl.x > 0 && pl.x < map.dim*map.u && 
 			pl.y > 0 && pl.y < map.dim*map.u	);
