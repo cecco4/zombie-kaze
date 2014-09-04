@@ -4,43 +4,32 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <title>Zombie-Kaze:  File sorgente input_output.h</title>
-
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
-
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="top"><!-- do not remove this div! -->
-
-
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  
-  
   <td style="padding-left: 0.5em;">
    <div id="projectname">Zombie-Kaze
-   
    </div>
-   
   </td>
-  
-  
-  
  </tr>
  </tbody>
 </table>
 </div>
-
-<!-- Generato da Doxygen 1.7.6.1 -->
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.1.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
@@ -73,33 +62,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
       <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
     </ul>
   </div>
-</div>
-<div class="header">
-  <div class="headertitle">
-<div class="title">input_output.h</div>  </div>
-</div><!--header-->
-<div class="contents">
-<a href="input__output_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00042"></a>00042 <a class="code" href="structmappa__dat.html" title="Struttura contenente i dati della mappa.">mappa_dat</a> <a class="code" href="input__output_8cc.html#af91c42ef64f8014600d4fa0693717d14" title="Carica la mappa da un file .map in &quot;data/mappe&quot; in una matrice statica, ritornando il tutto in uno st...">carica_mappa</a>(<span class="keywordtype">char</span> n_mappa);
-<a name="l00043"></a>00043 
-<a name="l00051"></a>00051 <span class="keywordtype">void</span> <a class="code" href="input__output_8cc.html#a85af57e0be1130f14f75c2697ea0472a" title="Setta i bool nel array tasto (inizializzato nel main), in base al tasto premuto o rilasciato...">aggiorna_tasti</a>(ALLEGRO_EVENT &amp;ev, <span class="keywordtype">bool</span> tasto[], <span class="keywordtype">bool</span> <span class="keyword">set</span>);
-<a name="l00052"></a>00052 
-<a name="l00067"></a>00067 <span class="keywordtype">int</span> <a class="code" href="input__output_8cc.html#ac5f115a8ebe4017787ab921ff7a8b883" title="controlla se ci sono tutte le texture della mappa, provando ad accedere ai file.">controlla_texture_mappa</a>(<a class="code" href="structmappa__dat.html" title="Struttura contenente i dati della mappa.">mappa_dat</a> &amp;map, <span class="keywordtype">int</span> *text_list, <a class="code" href="structnemici__dat.html" title="Struttura contenente i dati di tutti i nemici sulla mappa.">nemici_dat</a> &amp;nem);
-<a name="l00068"></a>00068 
-<a name="l00076"></a>00076 <span class="keywordtype">bool</span> <a class="code" href="input__output_8cc.html#a529e27b4d6e0f9cf078632ef47e06a1f" title="Carica le texture necessarie al livello su un array di texture_dat ritorna true se tutto è andato ben...">carica_texture_mappa</a>(<a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> texture[], <span class="keywordtype">int</span> *text_list, <span class="keywordtype">int</span> num_tex);
-<a name="l00077"></a>00077 
-<a name="l00083"></a>00083 <span class="keywordtype">bool</span> <a class="code" href="input__output_8cc.html#af581f437e28bf6d1f693480299175756" title="Carica le texture del nemico su un array di texture dat ritorna true se tutto è andato bene...">carica_texture_nemico</a>(<a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> text[]);
-<a name="l00084"></a>00084 
-<a name="l00093"></a>00093 <a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> <a class="code" href="input__output_8cc.html#a159608de82665b7bee07e33554883a85" title="carica un immagine generica e la salva su un immagine_dat ritorna la struttura con l&#39;immagine salvata...">carica_immagine</a> ( <a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> img, <span class="keyword">const</span> <span class="keywordtype">char</span> *path);
-<a name="l00094"></a>00094 
-<a name="l00100"></a>00100 <span class="keywordtype">bool</span> <a class="code" href="input__output_8cc.html#a712330d7c6c595b2e912e8d4e4f2fe70" title="Carica l&#39;audio del gioco, ritornando true se è andato tutto bene, false in caso contrario.">carica_audio</a>(<a class="code" href="structaudio__dat.html" title="Struttura contenente i dati dell&#39; audio.">audio_dat</a> &amp;audio);
-</pre></div></div><!-- contents -->
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pagine</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,13 +77,31 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </iframe>
 </div>
 
-
-
+<div class="header">
+  <div class="headertitle">
+<div class="title">input_output.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="input__output_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<a class="code" href="structmappa__dat.html" title="Struttura contenente i dati della mappa.">mappa_dat</a> <a class="code" href="input__output_8cc.html#af91c42ef64f8014600d4fa0693717d14" title="Carica la mappa da un file .map in &quot;data/mappe&quot; in una matrice statica, ritornando il tutto in uno st...">carica_mappa</a>(<span class="keywordtype">char</span> n_mappa);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keywordtype">void</span> <a class="code" href="input__output_8cc.html#a85af57e0be1130f14f75c2697ea0472a" title="Setta i bool nel array tasto (inizializzato nel main), in base al tasto premuto o rilasciato...">aggiorna_tasti</a>(ALLEGRO_EVENT &amp;ev, <span class="keywordtype">bool</span> tasto[], <span class="keywordtype">bool</span> <span class="keyword">set</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="keywordtype">int</span> <a class="code" href="input__output_8cc.html#ac5f115a8ebe4017787ab921ff7a8b883" title="controlla se ci sono tutte le texture della mappa, provando ad accedere ai file.">controlla_texture_mappa</a>(<a class="code" href="structmappa__dat.html" title="Struttura contenente i dati della mappa.">mappa_dat</a> &amp;map, <span class="keywordtype">int</span> *text_list, <a class="code" href="structnemici__dat.html" title="Struttura contenente i dati di tutti i nemici sulla mappa.">nemici_dat</a> &amp;nem);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="input__output_8cc.html#a529e27b4d6e0f9cf078632ef47e06a1f" title="Carica le texture necessarie al livello su un array di texture_dat ritorna true se tutto è andato ben...">carica_texture_mappa</a>(<a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> texture[], <span class="keywordtype">int</span> *text_list, <span class="keywordtype">int</span> num_tex);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="input__output_8cc.html#af581f437e28bf6d1f693480299175756" title="Carica le texture del nemico su un array di texture dat ritorna true se tutto è andato bene...">carica_texture_nemico</a>(<a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> text[]);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> <a class="code" href="input__output_8cc.html#a159608de82665b7bee07e33554883a85" title="carica un immagine generica e la salva su un immagine_dat ritorna la struttura con l&#39;immagine salvata...">carica_immagine</a> ( <a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> img, <span class="keyword">const</span> <span class="keywordtype">char</span> *path);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="input__output_8cc.html#a712330d7c6c595b2e912e8d4e4f2fe70" title="Carica l&#39;audio del gioco, ritornando true se è andato tutto bene, false in caso contrario.">carica_audio</a>(<a class="code" href="structaudio__dat.html" title="Struttura contenente i dati dell&#39; audio.">audio_dat</a> &amp;audio);</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generato Mer 2 Lug 2014 14:42:37 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
+Generato Gio 4 Set 2014 12:44:46 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.7.6.1
+</a> 1.8.1.2
 </small></address>
-
 </body>
 </html>

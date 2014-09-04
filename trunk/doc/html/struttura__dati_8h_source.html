@@ -4,43 +4,32 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <title>Zombie-Kaze:  File sorgente struttura_dati.h</title>
-
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
-<link href="doxygen.css" rel="stylesheet" type="text/css" />
-
-<link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/search.js"></script>
 <script type="text/javascript">
   $(document).ready(function() { searchBox.OnSelectItem(0); });
 </script>
-
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="top"><!-- do not remove this div! -->
-
-
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
 <div id="titlearea">
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  
-  
   <td style="padding-left: 0.5em;">
    <div id="projectname">Zombie-Kaze
-   
    </div>
-   
   </td>
-  
-  
-  
  </tr>
  </tbody>
 </table>
 </div>
-
-<!-- Generato da Doxygen 1.7.6.1 -->
+<!-- end header part -->
+<!-- Generato da Doxygen 1.8.1.2 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </script>
@@ -73,148 +62,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
       <li><a href="globals.html"><span>Elementi&#160;dei&#160;file</span></a></li>
     </ul>
   </div>
-</div>
-<div class="header">
-  <div class="headertitle">
-<div class="title">struttura_dati.h</div>  </div>
-</div><!--header-->
-<div class="contents">
-<a href="struttura__dati_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">//C++ header</span>
-<a name="l00002"></a>00002 <span class="preprocessor">#include &lt;iostream&gt;</span>
-<a name="l00003"></a>00003 <span class="preprocessor">#include &lt;math.h&gt;</span>
-<a name="l00004"></a><a class="code" href="struttura__dati_8h.html#a525335710b53cb064ca56b936120431e">00004</a> <span class="preprocessor">#define _USE_MATH_DEFINES</span>
-<a name="l00005"></a>00005 <span class="preprocessor"></span>
-<a name="l00006"></a>00006 <span class="comment">//allegro header</span>
-<a name="l00007"></a>00007 <span class="preprocessor">#include &lt;allegro5/allegro.h&gt;</span>
-<a name="l00008"></a>00008 <span class="preprocessor">#include &lt;allegro5/allegro_audio.h&gt;</span>
-<a name="l00009"></a>00009 
-<a name="l00010"></a>00010 <span class="keyword">using namespace </span>std;
-<a name="l00011"></a>00011 
-<a name="l00012"></a>00012 
-<a name="l00013"></a><a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b">00013</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a> = 320;       
-<a name="l00014"></a><a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf">00014</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf" title="Altezza dello schermo.">hschermo</a> = 200;       
-<a name="l00016"></a><a class="code" href="struttura__dati_8h.html#a75e75af9055561f651bae3ad9cdc6f37">00016</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="struttura__dati_8h.html#a75e75af9055561f651bae3ad9cdc6f37" title="Dimensione unità della mappa.">dimensione_tile</a> = 64; 
-<a name="l00017"></a><a class="code" href="struttura__dati_8h.html#a5646d8b9823dbfc75d5362b2fb28f495">00017</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="struttura__dati_8h.html#a5646d8b9823dbfc75d5362b2fb28f495" title="Field of view della camera.">FOV</a> = 60;                             
-<a name="l00018"></a><a class="code" href="struttura__dati_8h.html#ac5090a6568797128b0a5545228bb8b75">00018</a> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="struttura__dati_8h.html#ac5090a6568797128b0a5545228bb8b75" title="Framerate del gioco.">FPS</a> = 60;                             
-<a name="l00023"></a><a class="code" href="struttura__dati_8h.html#ac135773066aa5d3223927deba36fdb2c">00023</a> <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="struttura__dati_8h.html#ac135773066aa5d3223927deba36fdb2c" title="distanza del piano di proiezione dallo schermo">dist_schermo</a> = (<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>/2) /  tan(<a class="code" href="struttura__dati_8h.html#a5646d8b9823dbfc75d5362b2fb28f495" title="Field of view della camera.">FOV</a>/2* M_PI / 180.0);
-<a name="l00024"></a>00024 
-<a name="l00028"></a><a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53b">00028</a> <span class="keyword">enum</span> <a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53b" title="Stato del gioco, serve al gameloop (nel main) per eseguire diverse operazioni a seconda della fase in...">STATO</a> { <a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53ba348ee0b12aa2add36de34a33d06c2a52">CARICA</a>, <a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53ba0352906d1ea1dfcd663c918f3a86755b">PLAY</a>, <a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53ba871723195985a4ae22d7e10d99bf8a00">GAME_OVER</a> };
-<a name="l00029"></a>00029 
-<a name="l00031"></a><a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959c">00031</a> <span class="keyword">enum</span> <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959c" title="Valori utilizzati dall&#39;array tasto (nel main)">TASTI</a>{ <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca7911229e7fd613f96aeaf9413c8251bc">SU</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca5387bb29e78bfce7c11164018e81ab7b">GIU</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca898fd7abd6aae10a03fc8f61543e1ab6">SX</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca22dc95a35fbd833d9908928812979156">DX</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca8bbbcdd35f04ea619b9851d763eed24e">SPAZIO</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca0ce5dce475e87b709641524af5b2ff8d">INVIO</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca82f05f38f6a17b117cdd2b83227912c6">P</a>};
-<a name="l00032"></a>00032 
-<a name="l00034"></a><a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938a93493ef7364752effd9004da8e911c1b">00034</a> <span class="keyword">enum</span> <a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938" title="Stati dell&#39;animazione della pistola.">ANIM_PIST</a> { <a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938a4303eb08a6089d7c223aa1f76fa56a30">FERMO</a> , <a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938a16c1673b767e8af2531566c254244256">CAMMINA</a>, <a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938a93493ef7364752effd9004da8e911c1b">SPARA</a> };
-<a name="l00035"></a>00035 
-<a name="l00036"></a>00036 
-<a name="l00038"></a><a class="code" href="structplayer__dat.html">00038</a> <span class="keyword">struct </span><a class="code" href="structplayer__dat.html" title="Struttura contenente i dati del giocatore.">player_dat</a> {
-<a name="l00039"></a><a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03">00039</a>         <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a>;       
-<a name="l00040"></a><a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2">00040</a>         <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a>;       
-<a name="l00041"></a><a class="code" href="structplayer__dat.html#ae51ef04fa403d4694a36380e54b3148d">00041</a>         <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#ae51ef04fa403d4694a36380e54b3148d" title="Angolo in gradi.">ang</a>;     
-<a name="l00043"></a><a class="code" href="structplayer__dat.html#aa464040dee51b4b4a813074f74c4e9d5">00043</a>         <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#aa464040dee51b4b4a813074f74c4e9d5" title="Valore di incremento per l&#39;avanzamento.">vel_camminata</a>; 
-<a name="l00044"></a><a class="code" href="structplayer__dat.html#a995e308433331c17b1c3e1183832cc5f">00044</a>         <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#a995e308433331c17b1c3e1183832cc5f" title="Valore di incremento per la modifica dell&#39;angolo.">vel_gira</a>;  
-<a name="l00046"></a><a class="code" href="structplayer__dat.html#a65e7647a04215f5fbce3e3753a79001c">00046</a>         <span class="keywordtype">int</span> raggio_collisione; 
-<a name="l00050"></a><a class="code" href="structplayer__dat.html#ac3c1dd8e6cde041ef33a9638abc36fc8">00050</a>         <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#ac3c1dd8e6cde041ef33a9638abc36fc8" title="Distanza dal muro più vicino.">dist_m</a>;  
-<a name="l00052"></a><a class="code" href="structplayer__dat.html#a050afd4135a3b8b9b64c34e76c1639aa">00052</a>         <span class="keywordtype">int</span> <a class="code" href="structplayer__dat.html#a050afd4135a3b8b9b64c34e76c1639aa" title="Altezza del giocatore.">h</a>;      
-<a name="l00053"></a><a class="code" href="structplayer__dat.html#ac9b0f334d439e2ad54db873406489f62">00053</a>         <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#ac9b0f334d439e2ad54db873406489f62" title="Field of view del giocatore.">fov</a>; 
-<a name="l00056"></a>00056 };
-<a name="l00057"></a>00057 
-<a name="l00059"></a><a class="code" href="structmappa__dat.html">00059</a> <span class="keyword">struct </span><a class="code" href="structmappa__dat.html" title="Struttura contenente i dati della mappa.">mappa_dat</a> {
-<a name="l00061"></a><a class="code" href="structmappa__dat.html#aa8812a67b74b6433219812c8b95ae2cb">00061</a>         <span class="keywordtype">int</span> **<a class="code" href="structmappa__dat.html#aa8812a67b74b6433219812c8b95ae2cb" title="matrice dinamica che contiene le informazioni sulla locazione dei muri">data</a>;     
-<a name="l00062"></a>00062 
-<a name="l00063"></a><a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791">00063</a>         <span class="keywordtype">int</span> <a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791" title="Numero blocchi per lato della mappa.">dim</a>;        
-<a name="l00064"></a><a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60">00064</a>         <span class="keywordtype">int</span> <a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>;          
-<a name="l00066"></a><a class="code" href="structmappa__dat.html#adadee0412f7510ecdfc6de360f3dacbb">00066</a>         <span class="keywordtype">char</span> <a class="code" href="structmappa__dat.html#adadee0412f7510ecdfc6de360f3dacbb" title="Carattere pavimento.">pav</a>;       
-<a name="l00067"></a><a class="code" href="structmappa__dat.html#a8acbd9730659e0a5c57b6a9677df8a0c">00067</a>         <span class="keywordtype">char</span> <a class="code" href="structmappa__dat.html#a8acbd9730659e0a5c57b6a9677df8a0c" title="Carattero soffitto.">soff</a>;      
-<a name="l00068"></a>00068 };
-<a name="l00069"></a>00069 
-<a name="l00071"></a><a class="code" href="structimmagine__dat.html">00071</a> <span class="keyword">struct </span><a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> {
-<a name="l00072"></a><a class="code" href="structimmagine__dat.html#a2975ce1f4238364efbe54a7078821ae1">00072</a>         ALLEGRO_BITMAP *<a class="code" href="structimmagine__dat.html#a2975ce1f4238364efbe54a7078821ae1" title="Puntatore all&#39;immagine.">img</a>;    
-<a name="l00073"></a><a class="code" href="structimmagine__dat.html#a7dbebad641799934ba5a8e7234582b48">00073</a>         <span class="keywordtype">int</span> <a class="code" href="structimmagine__dat.html#a7dbebad641799934ba5a8e7234582b48" title="Larghezza immagine.">l</a>;  
-<a name="l00074"></a><a class="code" href="structimmagine__dat.html#ad7bcfcb2bfd1bfebaf5089c107c69127">00074</a>         <span class="keywordtype">int</span> <a class="code" href="structimmagine__dat.html#ad7bcfcb2bfd1bfebaf5089c107c69127" title="Altezza immagine.">h</a>;  
-<a name="l00076"></a><a class="code" href="structimmagine__dat.html#ab5484e83f7ad93808c982d069dc56979">00076</a>         <span class="keywordtype">float</span> <a class="code" href="structimmagine__dat.html#ab5484e83f7ad93808c982d069dc56979" title="Coordinata x.">x</a>;        
-<a name="l00077"></a><a class="code" href="structimmagine__dat.html#adac354f3fe6305b8e0ff132a65a3027c">00077</a>         <span class="keywordtype">float</span> <a class="code" href="structimmagine__dat.html#adac354f3fe6305b8e0ff132a65a3027c" title="Coordinata y.">y</a>;        
-<a name="l00078"></a><a class="code" href="structimmagine__dat.html#a003e3d92b197ecf3c1483b0436d38d6b">00078</a>         <span class="keywordtype">float</span> <a class="code" href="structimmagine__dat.html#a003e3d92b197ecf3c1483b0436d38d6b" title="Larghezza attuale.">sizex</a>;    
-<a name="l00079"></a><a class="code" href="structimmagine__dat.html#a1ae574c31618068998c0fc006a4e5615">00079</a>         <span class="keywordtype">float</span> <a class="code" href="structimmagine__dat.html#a1ae574c31618068998c0fc006a4e5615" title="Altezza attuale.">sizey</a>;    
-<a name="l00080"></a><a class="code" href="structimmagine__dat.html#ae585864d613bb72c554efddaaa43b9ac">00080</a>         <span class="keywordtype">int</span> <a class="code" href="structimmagine__dat.html#ae585864d613bb72c554efddaaa43b9ac" title="Trasparenza.">alpha</a>;              
-<a name="l00081"></a><a class="code" href="structimmagine__dat.html#aa3afb63d9482619cd997ef161a1e58d0">00081</a>         <span class="keywordtype">float</span> <a class="code" href="structimmagine__dat.html#aa3afb63d9482619cd997ef161a1e58d0" title="Angolo.">angle</a>;    
-<a name="l00082"></a>00082 };
-<a name="l00083"></a>00083 
-<a name="l00084"></a>00084 
-<a name="l00086"></a><a class="code" href="structtexture__dat.html">00086</a> <span class="keyword">struct </span><a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> {
-<a name="l00088"></a><a class="code" href="structtexture__dat.html#a2d4e329432e9f424959bdb18c1b92c42">00088</a>         ALLEGRO_COLOR img [<a class="code" href="struttura__dati_8h.html#a75e75af9055561f651bae3ad9cdc6f37" title="Dimensione unità della mappa.">dimensione_tile</a>][<a class="code" href="struttura__dati_8h.html#a75e75af9055561f651bae3ad9cdc6f37" title="Dimensione unità della mappa.">dimensione_tile</a>];
-<a name="l00089"></a>00089 };
-<a name="l00090"></a>00090 
-<a name="l00091"></a>00091 
-<a name="l00093"></a><a class="code" href="structnemico__dat.html">00093</a> <span class="keyword">struct </span><a class="code" href="structnemico__dat.html" title="Struttura contenente i dati di un nemico.">nemico_dat</a> {
-<a name="l00094"></a><a class="code" href="structnemico__dat.html#a8671e18e611267e6f5a0a33a0aa96371">00094</a>         <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#a8671e18e611267e6f5a0a33a0aa96371" title="Coordinata x.">x</a>;               
-<a name="l00095"></a><a class="code" href="structnemico__dat.html#ae77c14ff4bea0943f352d4f7eec20ddb">00095</a>         <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#ae77c14ff4bea0943f352d4f7eec20ddb" title="Coordinata y.">y</a>;               
-<a name="l00096"></a><a class="code" href="structnemico__dat.html#a07058cc53d10ae16d32efafbff748623">00096</a>         <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#a07058cc53d10ae16d32efafbff748623" title="Angolo.">ang</a>;             
-<a name="l00097"></a><a class="code" href="structnemico__dat.html#a4df41dde8f4d6a21750610b919487484">00097</a>         <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#a4df41dde8f4d6a21750610b919487484" title="Distanza dal giocatore.">dist</a>;    
-<a name="l00098"></a><a class="code" href="structnemico__dat.html#a970f8239ebf25125697814e6fb16edcc">00098</a>         <span class="keywordtype">int</span> <a class="code" href="structnemico__dat.html#a970f8239ebf25125697814e6fb16edcc" title="Larghezza.">l</a>;                  
-<a name="l00101"></a><a class="code" href="structnemico__dat.html#a3e898c4c99259c7035f0cf24ec396f2f">00101</a>         <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#a3e898c4c99259c7035f0cf24ec396f2f" title="Coordinata x futura.">xarrivo</a>; 
-<a name="l00102"></a><a class="code" href="structnemico__dat.html#ae4aeb970ca06a8f6fc25cf6adb7b0775">00102</a>         <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#ae4aeb970ca06a8f6fc25cf6adb7b0775" title="Coordinata y futura.">yarrivo</a>; 
-<a name="l00105"></a><a class="code" href="structnemico__dat.html#a41f88af2ac81498e51823af81a90057a">00105</a>         <span class="keywordtype">bool</span> <a class="code" href="structnemico__dat.html#a41f88af2ac81498e51823af81a90057a" title="true se è stato visto">vis</a>;               
-<a name="l00106"></a><a class="code" href="structnemico__dat.html#a7eaec74f66484b6bd53d377038d5cdcd">00106</a>         <span class="keywordtype">bool</span> <a class="code" href="structnemico__dat.html#a7eaec74f66484b6bd53d377038d5cdcd" title="se true insegue il giocatore">insegui</a>;   
-<a name="l00107"></a><a class="code" href="structnemico__dat.html#a015b037400bc28215ce12ddc08f0ee1a">00107</a>         <span class="keywordtype">bool</span> <a class="code" href="structnemico__dat.html#a015b037400bc28215ce12ddc08f0ee1a" title="true se si sta muovendo">simuove</a>;   
-<a name="l00108"></a><a class="code" href="structnemico__dat.html#a4064a000488c6e7c716c2731934207be">00108</a>         <span class="keywordtype">bool</span> <a class="code" href="structnemico__dat.html#a4064a000488c6e7c716c2731934207be" title="true se è vivo">vivo</a>;              
-<a name="l00110"></a><a class="code" href="structnemico__dat.html#a4d24ac15a14e1050d74270eeb85aaf69">00110</a>         <span class="keywordtype">int</span> <a class="code" href="structnemico__dat.html#a4d24ac15a14e1050d74270eeb85aaf69" title="vita attuale">vita</a>;       
-<a name="l00112"></a><a class="code" href="structnemico__dat.html#a0da2ca593351036cd4ce45c5d5d3dc34">00112</a>         <span class="keywordtype">int</span> <a class="code" href="structnemico__dat.html#a0da2ca593351036cd4ce45c5d5d3dc34" title="Frame attuale dell&#39;animazione.">frame</a>;      
-<a name="l00113"></a><a class="code" href="structnemico__dat.html#aa84f3203ae23c581d618a39d125ed19f">00113</a>         <span class="keywordtype">int</span> <a class="code" href="structnemico__dat.html#aa84f3203ae23c581d618a39d125ed19f" title="Tempo dell&#39;animazione.">t_ani</a>;      
-<a name="l00114"></a>00114 };
-<a name="l00115"></a>00115 
-<a name="l00117"></a><a class="code" href="structnemici__dat.html">00117</a> <span class="keyword">struct </span><a class="code" href="structnemici__dat.html" title="Struttura contenente i dati di tutti i nemici sulla mappa.">nemici_dat</a> {
-<a name="l00118"></a><a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1">00118</a>         <a class="code" href="structnemico__dat.html" title="Struttura contenente i dati di un nemico.">nemico_dat</a> *<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>;   
-<a name="l00119"></a><a class="code" href="structnemici__dat.html#ab9f6af23f8e24915ab8e328a76d3c930">00119</a>         <span class="keywordtype">int</span> <a class="code" href="structnemici__dat.html#ab9f6af23f8e24915ab8e328a76d3c930" title="Numero nemici.">num_nemici</a>;           
-<a name="l00120"></a><a class="code" href="structnemici__dat.html#a7e049f38d6e290c9c446446e6630ab7c">00120</a>         <span class="keywordtype">int</span> <a class="code" href="structnemici__dat.html#a7e049f38d6e290c9c446446e6630ab7c" title="Numero nemici vivi.">nem_vivi</a>;             
-<a name="l00121"></a><a class="code" href="structnemici__dat.html#ad3760d45d329954d5211f392cc7e1120">00121</a>         <a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> text[10]; 
-<a name="l00122"></a><a class="code" href="structnemici__dat.html#ab26c35bc361e94a56ce9053daff78ab7">00122</a>         <span class="keywordtype">double</span> <a class="code" href="structnemici__dat.html#ab26c35bc361e94a56ce9053daff78ab7" title="Velocità camminata nemici.">vel_camminata</a>; 
-<a name="l00123"></a>00123 };
-<a name="l00124"></a>00124 
-<a name="l00126"></a><a class="code" href="structpistola__dat.html">00126</a> <span class="keyword">struct </span><a class="code" href="structpistola__dat.html" title="Struttura contenente i dati della pistola.">pistola_dat</a> {
-<a name="l00127"></a><a class="code" href="structpistola__dat.html#a8facb44e982b31a3412de88b5a61f97f">00127</a>         <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#a8facb44e982b31a3412de88b5a61f97f" title="Coordinata x.">x</a>; 
-<a name="l00128"></a><a class="code" href="structpistola__dat.html#af9afa863ed5d208b416b6501135cd4f0">00128</a>         <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#af9afa863ed5d208b416b6501135cd4f0" title="Coordinata y.">y</a>; 
-<a name="l00130"></a><a class="code" href="structpistola__dat.html#a0b5935da0a340fddebc6cb36bf44626c">00130</a>         ALLEGRO_BITMAP *<a class="code" href="structpistola__dat.html#a0b5935da0a340fddebc6cb36bf44626c" title="Puntatore immagine pistola.">img</a>; 
-<a name="l00131"></a><a class="code" href="structpistola__dat.html#a479297ee305f6dfded11030baf3628d1">00131</a>         <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#a479297ee305f6dfded11030baf3628d1" title="Larghezza immagine.">img_l</a>;                       
-<a name="l00132"></a><a class="code" href="structpistola__dat.html#a207ab0beb66adf955686dadc27bcd737">00132</a>         <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#a207ab0beb66adf955686dadc27bcd737" title="Altezza immagine.">img_h</a>;                       
-<a name="l00133"></a><a class="code" href="structpistola__dat.html#a0f58f2d3b8469427118a8cf7366b08a7">00133</a>         <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#a0f58f2d3b8469427118a8cf7366b08a7" title="Larghezza frame.">frame_l</a>;             
-<a name="l00136"></a><a class="code" href="structpistola__dat.html#a8c132480a4b8dc3421cf1c1885a45907">00136</a>         <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#a8c132480a4b8dc3421cf1c1885a45907" title="Tempo attuale dello sparo.">t</a>;     
-<a name="l00137"></a><a class="code" href="structpistola__dat.html#aa2aaf099e22d3d123d19717c34c2378d">00137</a>         <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#aa2aaf099e22d3d123d19717c34c2378d" title="Tempo minimo tra uno sparo e l&#39;altro.">tmax</a>;  
-<a name="l00138"></a><a class="code" href="structpistola__dat.html#aca178c4c1807973f79d5060210ec7e90">00138</a>         <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#aca178c4c1807973f79d5060210ec7e90" title="Danno di un colpo inflitto al nemico.">danno</a>; 
-<a name="l00140"></a><a class="code" href="structpistola__dat.html#a133a157165b5692f784a79a9826dad31">00140</a>         <a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938" title="Stati dell&#39;animazione della pistola.">ANIM_PIST</a> <a class="code" href="structpistola__dat.html#a133a157165b5692f784a79a9826dad31" title="Stato attuale animazione pistola.">stato_anim</a>; 
-<a name="l00141"></a><a class="code" href="structpistola__dat.html#a2ea8ad1aecb65138e59191f18a2ef7ac">00141</a>         <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#a2ea8ad1aecb65138e59191f18a2ef7ac" title="Oscillazione pistola da fermo.">FERMO_off</a>;      
-<a name="l00142"></a><a class="code" href="structpistola__dat.html#ab8acb34148186737ac5ec3d20729d29e">00142</a>         <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#ab8acb34148186737ac5ec3d20729d29e" title="Velocità oscillazione pistola da fermo.">FERMO_vel</a>;          
-<a name="l00143"></a><a class="code" href="structpistola__dat.html#a2f9f0b85f58e44eb5e6c7b11670862a9">00143</a>         <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#a2f9f0b85f58e44eb5e6c7b11670862a9" title="Oscillazione pistola camminando.">CAMMINA_off</a>;    
-<a name="l00144"></a><a class="code" href="structpistola__dat.html#a547e840f6e6c13266b0a57d8b56a47d3">00144</a>         <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#a547e840f6e6c13266b0a57d8b56a47d3" title="Velocità oscillazione pistola camminando.">CAMMINA_vel</a>;        
-<a name="l00145"></a><a class="code" href="structpistola__dat.html#a0ef15eecc8806560a5c71aff516d1dfe">00145</a>         <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#a0ef15eecc8806560a5c71aff516d1dfe" title="Frame attuale pistola.">frame</a>;              
-<a name="l00146"></a><a class="code" href="structpistola__dat.html#ab63aa7b168f360c29d96731649e99705">00146</a>         <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#ab63aa7b168f360c29d96731649e99705" title="Numero frame animazione.">nframe</a>;             
-<a name="l00147"></a><a class="code" href="structpistola__dat.html#a1802464b5a1ba9ee821f603c8b20d44d">00147</a>         <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#a1802464b5a1ba9ee821f603c8b20d44d" title="Tempo animazione dello sparo.">t_SPARA</a>;  
-<a name="l00149"></a>00149 };
-<a name="l00150"></a>00150 
-<a name="l00152"></a><a class="code" href="structaudio__dat.html">00152</a> <span class="keyword">struct </span><a class="code" href="structaudio__dat.html" title="Struttura contenente i dati dell&#39; audio.">audio_dat</a> {
-<a name="l00153"></a><a class="code" href="structaudio__dat.html#a461204e32aaa7af0cad41c757b56f4de">00153</a>         ALLEGRO_SAMPLE_ID <a class="code" href="structaudio__dat.html#a461204e32aaa7af0cad41c757b56f4de" title="Identificatore audio in riproduzione.">m_id</a>; 
-<a name="l00155"></a><a class="code" href="structaudio__dat.html#a22019438c4a16e3e735f1485c452bd72">00155</a>         ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a22019438c4a16e3e735f1485c452bd72">atmosfera</a>; 
-<a name="l00156"></a><a class="code" href="structaudio__dat.html#a059ee9b692b7afef651abf6f0de37073">00156</a>         ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a059ee9b692b7afef651abf6f0de37073">titolo</a>;
-<a name="l00157"></a><a class="code" href="structaudio__dat.html#a6f05e0f798cd33bae2d362696b979857">00157</a>         ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a6f05e0f798cd33bae2d362696b979857">vittoria</a>;
-<a name="l00158"></a><a class="code" href="structaudio__dat.html#a048a56296e2e2ad6022ff9c52f06a3e2">00158</a>         ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a048a56296e2e2ad6022ff9c52f06a3e2">gameover</a>;
-<a name="l00159"></a><a class="code" href="structaudio__dat.html#a8bbc9e41206180ac25151646d37598c9">00159</a>         ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a8bbc9e41206180ac25151646d37598c9">morte</a>;
-<a name="l00160"></a><a class="code" href="structaudio__dat.html#aecfd0ccbdb1fedf58608100cc7c3d09a">00160</a>         ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#aecfd0ccbdb1fedf58608100cc7c3d09a">passo</a>;
-<a name="l00161"></a><a class="code" href="structaudio__dat.html#a322f5b28b9d90cec4e66d4978f279107">00161</a>         ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a322f5b28b9d90cec4e66d4978f279107">pistola</a>;
-<a name="l00162"></a><a class="code" href="structaudio__dat.html#ac3874d88afcd8664e32cbe2011d63f9b">00162</a>         ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#ac3874d88afcd8664e32cbe2011d63f9b">zombie</a>;
-<a name="l00163"></a><a class="code" href="structaudio__dat.html#a3f40fa1143978099b4cee8ab5a2a9a8f">00163</a>         ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a3f40fa1143978099b4cee8ab5a2a9a8f">bomba</a>;
-<a name="l00164"></a>00164 
-<a name="l00165"></a>00165 };
-<a name="l00166"></a>00166 
-<a name="l00167"></a>00167 
-<a name="l00168"></a>00168 
-<a name="l00169"></a>00169 
-<a name="l00170"></a>00170 
-<a name="l00171"></a>00171 
-</pre></div></div><!-- contents -->
+</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tutto</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classi</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>File</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funzioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variabili</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Tipi enumerati (enum)</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Valori del tipo enumerato</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Definizioni</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pagine</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -223,13 +77,146 @@ var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
 </iframe>
 </div>
 
-
-
+<div class="header">
+  <div class="headertitle">
+<div class="title">struttura_dati.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="struttura__dati_8h.html">Vai alla documentazione di questo file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">//C++ header</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="code" href="struttura__dati_8h.html#a525335710b53cb064ca56b936120431e">    4</a></span>&#160;<span class="preprocessor">#define _USE_MATH_DEFINES</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//allegro header</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro_audio.h&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b">   13</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a> = 320;       </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf">   14</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="struttura__dati_8h.html#af660130ebbf343c65c1bdcbb8fa23cbf" title="Altezza dello schermo.">hschermo</a> = 200;       </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="code" href="struttura__dati_8h.html#a75e75af9055561f651bae3ad9cdc6f37">   16</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="struttura__dati_8h.html#a75e75af9055561f651bae3ad9cdc6f37" title="Dimensione unità della mappa.">dimensione_tile</a> = 64; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="code" href="struttura__dati_8h.html#a5646d8b9823dbfc75d5362b2fb28f495">   17</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="struttura__dati_8h.html#a5646d8b9823dbfc75d5362b2fb28f495" title="Field of view della camera.">FOV</a> = 60;                             </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="code" href="struttura__dati_8h.html#ac5090a6568797128b0a5545228bb8b75">   18</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="struttura__dati_8h.html#ac5090a6568797128b0a5545228bb8b75" title="Framerate del gioco.">FPS</a> = 60;                             </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="code" href="struttura__dati_8h.html#ac135773066aa5d3223927deba36fdb2c">   23</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="struttura__dati_8h.html#ac135773066aa5d3223927deba36fdb2c" title="distanza del piano di proiezione dallo schermo">dist_schermo</a> = (<a class="code" href="struttura__dati_8h.html#a0784cd492c479dda0e0cb343eb420c0b" title="Larghezza dello schermo.">lschermo</a>/2) /  tan(<a class="code" href="struttura__dati_8h.html#a5646d8b9823dbfc75d5362b2fb28f495" title="Field of view della camera.">FOV</a>/2* M_PI / 180.0);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53b">   28</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53b" title="Stato del gioco, serve al gameloop (nel main) per eseguire diverse operazioni a seconda della fase in...">STATO</a> { <a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53ba348ee0b12aa2add36de34a33d06c2a52">CARICA</a>, <a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53ba0352906d1ea1dfcd663c918f3a86755b">PLAY</a>, <a class="code" href="struttura__dati_8h.html#af62f0f35361858927524f5221f98b53ba871723195985a4ae22d7e10d99bf8a00">GAME_OVER</a> };</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959c">   31</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959c" title="Valori utilizzati dall&#39;array tasto (nel main)">TASTI</a>{ <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca7911229e7fd613f96aeaf9413c8251bc">SU</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca5387bb29e78bfce7c11164018e81ab7b">GIU</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca898fd7abd6aae10a03fc8f61543e1ab6">SX</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca22dc95a35fbd833d9908928812979156">DX</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca8bbbcdd35f04ea619b9851d763eed24e">SPAZIO</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca0ce5dce475e87b709641524af5b2ff8d">INVIO</a>, <a class="code" href="struttura__dati_8h.html#a9c87ca40e543ebbb6e33116215d4959ca82f05f38f6a17b117cdd2b83227912c6">P</a>};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938a93493ef7364752effd9004da8e911c1b">   34</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938" title="Stati dell&#39;animazione della pistola.">ANIM_PIST</a> { <a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938a4303eb08a6089d7c223aa1f76fa56a30">FERMO</a> , <a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938a16c1673b767e8af2531566c254244256">CAMMINA</a>, <a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938a93493ef7364752effd9004da8e911c1b">SPARA</a> };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="code" href="structplayer__dat.html">   38</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structplayer__dat.html" title="Struttura contenente i dati del giocatore.">player_dat</a> {</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03">   39</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#af66b2d7f7e5c9a0c093b4ae92d8f0c03" title="Coordinata x.">x</a>;       </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2">   40</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#a8fc56837f576bfac7ee926e0aedefcf2" title="Coordinata y.">y</a>;       </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="code" href="structplayer__dat.html#ae51ef04fa403d4694a36380e54b3148d">   41</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#ae51ef04fa403d4694a36380e54b3148d" title="Angolo in gradi.">ang</a>;     </div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="code" href="structplayer__dat.html#aa464040dee51b4b4a813074f74c4e9d5">   43</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#aa464040dee51b4b4a813074f74c4e9d5" title="Valore di incremento per l&#39;avanzamento.">vel_camminata</a>; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="code" href="structplayer__dat.html#a995e308433331c17b1c3e1183832cc5f">   44</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#a995e308433331c17b1c3e1183832cc5f" title="Valore di incremento per la modifica dell&#39;angolo.">vel_gira</a>;  </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="code" href="structplayer__dat.html#a65e7647a04215f5fbce3e3753a79001c">   46</a></span>&#160;        <span class="keywordtype">int</span> raggio_collisione; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="structplayer__dat.html#ac3c1dd8e6cde041ef33a9638abc36fc8">   50</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#ac3c1dd8e6cde041ef33a9638abc36fc8" title="Distanza dal muro più vicino.">dist_m</a>;  </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="code" href="structplayer__dat.html#a050afd4135a3b8b9b64c34e76c1639aa">   52</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structplayer__dat.html#a050afd4135a3b8b9b64c34e76c1639aa" title="Altezza del giocatore.">h</a>;      </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="structplayer__dat.html#ac9b0f334d439e2ad54db873406489f62">   53</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structplayer__dat.html#ac9b0f334d439e2ad54db873406489f62" title="Field of view del giocatore.">fov</a>; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="code" href="structmappa__dat.html">   59</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmappa__dat.html" title="Struttura contenente i dati della mappa.">mappa_dat</a> {</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="code" href="structmappa__dat.html#aa8812a67b74b6433219812c8b95ae2cb">   61</a></span>&#160;        <span class="keywordtype">int</span> **<a class="code" href="structmappa__dat.html#aa8812a67b74b6433219812c8b95ae2cb" title="matrice dinamica che contiene le informazioni sulla locazione dei muri">data</a>;     </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791">   63</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structmappa__dat.html#af68162fa4ba3dbcbfe4691f0d692e791" title="Numero blocchi per lato della mappa.">dim</a>;        </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60">   64</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structmappa__dat.html#a66d74a7d20b0999f0840af9044c91d60" title="dimensione blocchi">u</a>;          </div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="code" href="structmappa__dat.html#adadee0412f7510ecdfc6de360f3dacbb">   66</a></span>&#160;        <span class="keywordtype">char</span> <a class="code" href="structmappa__dat.html#adadee0412f7510ecdfc6de360f3dacbb" title="Carattere pavimento.">pav</a>;       </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="code" href="structmappa__dat.html#a8acbd9730659e0a5c57b6a9677df8a0c">   67</a></span>&#160;        <span class="keywordtype">char</span> <a class="code" href="structmappa__dat.html#a8acbd9730659e0a5c57b6a9677df8a0c" title="Carattero soffitto.">soff</a>;      </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="code" href="structimmagine__dat.html">   71</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structimmagine__dat.html" title="Struttura contenente i dati di una immagine generica.">immagine_dat</a> {</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="code" href="structimmagine__dat.html#a2975ce1f4238364efbe54a7078821ae1">   72</a></span>&#160;        ALLEGRO_BITMAP *<a class="code" href="structimmagine__dat.html#a2975ce1f4238364efbe54a7078821ae1" title="Puntatore all&#39;immagine.">img</a>;    </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="code" href="structimmagine__dat.html#a7dbebad641799934ba5a8e7234582b48">   73</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structimmagine__dat.html#a7dbebad641799934ba5a8e7234582b48" title="Larghezza immagine.">l</a>;  </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="code" href="structimmagine__dat.html#ad7bcfcb2bfd1bfebaf5089c107c69127">   74</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structimmagine__dat.html#ad7bcfcb2bfd1bfebaf5089c107c69127" title="Altezza immagine.">h</a>;  </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="code" href="structimmagine__dat.html#ab5484e83f7ad93808c982d069dc56979">   76</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structimmagine__dat.html#ab5484e83f7ad93808c982d069dc56979" title="Coordinata x.">x</a>;        </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="code" href="structimmagine__dat.html#adac354f3fe6305b8e0ff132a65a3027c">   77</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structimmagine__dat.html#adac354f3fe6305b8e0ff132a65a3027c" title="Coordinata y.">y</a>;        </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="code" href="structimmagine__dat.html#a003e3d92b197ecf3c1483b0436d38d6b">   78</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structimmagine__dat.html#a003e3d92b197ecf3c1483b0436d38d6b" title="Larghezza attuale.">sizex</a>;    </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="code" href="structimmagine__dat.html#a1ae574c31618068998c0fc006a4e5615">   79</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structimmagine__dat.html#a1ae574c31618068998c0fc006a4e5615" title="Altezza attuale.">sizey</a>;    </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="code" href="structimmagine__dat.html#ae585864d613bb72c554efddaaa43b9ac">   80</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structimmagine__dat.html#ae585864d613bb72c554efddaaa43b9ac" title="Trasparenza.">alpha</a>;              </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="code" href="structimmagine__dat.html#aa3afb63d9482619cd997ef161a1e58d0">   81</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structimmagine__dat.html#aa3afb63d9482619cd997ef161a1e58d0" title="Angolo.">angle</a>;    </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="code" href="structtexture__dat.html">   86</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> {</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="code" href="structtexture__dat.html#a2d4e329432e9f424959bdb18c1b92c42">   88</a></span>&#160;        ALLEGRO_COLOR img [<a class="code" href="struttura__dati_8h.html#a75e75af9055561f651bae3ad9cdc6f37" title="Dimensione unità della mappa.">dimensione_tile</a>][<a class="code" href="struttura__dati_8h.html#a75e75af9055561f651bae3ad9cdc6f37" title="Dimensione unità della mappa.">dimensione_tile</a>];</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="code" href="structnemico__dat.html">   93</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnemico__dat.html" title="Struttura contenente i dati di un nemico.">nemico_dat</a> {</div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a8671e18e611267e6f5a0a33a0aa96371">   94</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#a8671e18e611267e6f5a0a33a0aa96371" title="Coordinata x.">x</a>;               </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="code" href="structnemico__dat.html#ae77c14ff4bea0943f352d4f7eec20ddb">   95</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#ae77c14ff4bea0943f352d4f7eec20ddb" title="Coordinata y.">y</a>;               </div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a07058cc53d10ae16d32efafbff748623">   96</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#a07058cc53d10ae16d32efafbff748623" title="Angolo.">ang</a>;             </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a4df41dde8f4d6a21750610b919487484">   97</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#a4df41dde8f4d6a21750610b919487484" title="Distanza dal giocatore.">dist</a>;    </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a970f8239ebf25125697814e6fb16edcc">   98</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structnemico__dat.html#a970f8239ebf25125697814e6fb16edcc" title="Larghezza.">l</a>;                  </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a3e898c4c99259c7035f0cf24ec396f2f">  101</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#a3e898c4c99259c7035f0cf24ec396f2f" title="Coordinata x futura.">xarrivo</a>; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="code" href="structnemico__dat.html#ae4aeb970ca06a8f6fc25cf6adb7b0775">  102</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structnemico__dat.html#ae4aeb970ca06a8f6fc25cf6adb7b0775" title="Coordinata y futura.">yarrivo</a>; </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a41f88af2ac81498e51823af81a90057a">  105</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structnemico__dat.html#a41f88af2ac81498e51823af81a90057a" title="true se è stato visto">vis</a>;               </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a7eaec74f66484b6bd53d377038d5cdcd">  106</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structnemico__dat.html#a7eaec74f66484b6bd53d377038d5cdcd" title="se true insegue il giocatore">insegui</a>;   </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a015b037400bc28215ce12ddc08f0ee1a">  107</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structnemico__dat.html#a015b037400bc28215ce12ddc08f0ee1a" title="true se si sta muovendo">simuove</a>;   </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a4064a000488c6e7c716c2731934207be">  108</a></span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="structnemico__dat.html#a4064a000488c6e7c716c2731934207be" title="true se è vivo">vivo</a>;              </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a4d24ac15a14e1050d74270eeb85aaf69">  110</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structnemico__dat.html#a4d24ac15a14e1050d74270eeb85aaf69" title="vita attuale">vita</a>;       </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="code" href="structnemico__dat.html#a0da2ca593351036cd4ce45c5d5d3dc34">  112</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structnemico__dat.html#a0da2ca593351036cd4ce45c5d5d3dc34" title="Frame attuale dell&#39;animazione.">frame</a>;      </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="code" href="structnemico__dat.html#aa84f3203ae23c581d618a39d125ed19f">  113</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structnemico__dat.html#aa84f3203ae23c581d618a39d125ed19f" title="Tempo dell&#39;animazione.">t_ani</a>;      </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;};</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno"><a class="code" href="structnemici__dat.html">  117</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structnemici__dat.html" title="Struttura contenente i dati di tutti i nemici sulla mappa.">nemici_dat</a> {</div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1">  118</a></span>&#160;        <a class="code" href="structnemico__dat.html" title="Struttura contenente i dati di un nemico.">nemico_dat</a> *<a class="code" href="structnemici__dat.html#a559652c8265efa3bcae93c6dace103c1" title="Puntatore ad array di nemici.">nemico</a>;   </div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="code" href="structnemici__dat.html#ab9f6af23f8e24915ab8e328a76d3c930">  119</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structnemici__dat.html#ab9f6af23f8e24915ab8e328a76d3c930" title="Numero nemici.">num_nemici</a>;           </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="code" href="structnemici__dat.html#a7e049f38d6e290c9c446446e6630ab7c">  120</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structnemici__dat.html#a7e049f38d6e290c9c446446e6630ab7c" title="Numero nemici vivi.">nem_vivi</a>;             </div>
+<div class="line"><a name="l00121"></a><span class="lineno"><a class="code" href="structnemici__dat.html#ad3760d45d329954d5211f392cc7e1120">  121</a></span>&#160;        <a class="code" href="structtexture__dat.html" title="Struttura contenente i dati di una texture.">texture_dat</a> text[10]; </div>
+<div class="line"><a name="l00122"></a><span class="lineno"><a class="code" href="structnemici__dat.html#ab26c35bc361e94a56ce9053daff78ab7">  122</a></span>&#160;        <span class="keywordtype">double</span> <a class="code" href="structnemici__dat.html#ab26c35bc361e94a56ce9053daff78ab7" title="Velocità camminata nemici.">vel_camminata</a>; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="code" href="structpistola__dat.html">  126</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structpistola__dat.html" title="Struttura contenente i dati della pistola.">pistola_dat</a> {</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a8facb44e982b31a3412de88b5a61f97f">  127</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#a8facb44e982b31a3412de88b5a61f97f" title="Coordinata x.">x</a>; </div>
+<div class="line"><a name="l00128"></a><span class="lineno"><a class="code" href="structpistola__dat.html#af9afa863ed5d208b416b6501135cd4f0">  128</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#af9afa863ed5d208b416b6501135cd4f0" title="Coordinata y.">y</a>; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a0b5935da0a340fddebc6cb36bf44626c">  130</a></span>&#160;        ALLEGRO_BITMAP *<a class="code" href="structpistola__dat.html#a0b5935da0a340fddebc6cb36bf44626c" title="Puntatore immagine pistola.">img</a>; </div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a479297ee305f6dfded11030baf3628d1">  131</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#a479297ee305f6dfded11030baf3628d1" title="Larghezza immagine.">img_l</a>;                       </div>
+<div class="line"><a name="l00132"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a207ab0beb66adf955686dadc27bcd737">  132</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#a207ab0beb66adf955686dadc27bcd737" title="Altezza immagine.">img_h</a>;                       </div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a0f58f2d3b8469427118a8cf7366b08a7">  133</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#a0f58f2d3b8469427118a8cf7366b08a7" title="Larghezza frame.">frame_l</a>;             </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a8c132480a4b8dc3421cf1c1885a45907">  136</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#a8c132480a4b8dc3421cf1c1885a45907" title="Tempo attuale dello sparo.">t</a>;     </div>
+<div class="line"><a name="l00137"></a><span class="lineno"><a class="code" href="structpistola__dat.html#aa2aaf099e22d3d123d19717c34c2378d">  137</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#aa2aaf099e22d3d123d19717c34c2378d" title="Tempo minimo tra uno sparo e l&#39;altro.">tmax</a>;  </div>
+<div class="line"><a name="l00138"></a><span class="lineno"><a class="code" href="structpistola__dat.html#aca178c4c1807973f79d5060210ec7e90">  138</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#aca178c4c1807973f79d5060210ec7e90" title="Danno di un colpo inflitto al nemico.">danno</a>; </div>
+<div class="line"><a name="l00140"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a133a157165b5692f784a79a9826dad31">  140</a></span>&#160;        <a class="code" href="struttura__dati_8h.html#a03f06e72fcc674618c091f13ea583938" title="Stati dell&#39;animazione della pistola.">ANIM_PIST</a> <a class="code" href="structpistola__dat.html#a133a157165b5692f784a79a9826dad31" title="Stato attuale animazione pistola.">stato_anim</a>; </div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a2ea8ad1aecb65138e59191f18a2ef7ac">  141</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#a2ea8ad1aecb65138e59191f18a2ef7ac" title="Oscillazione pistola da fermo.">FERMO_off</a>;      </div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="code" href="structpistola__dat.html#ab8acb34148186737ac5ec3d20729d29e">  142</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#ab8acb34148186737ac5ec3d20729d29e" title="Velocità oscillazione pistola da fermo.">FERMO_vel</a>;          </div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a2f9f0b85f58e44eb5e6c7b11670862a9">  143</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#a2f9f0b85f58e44eb5e6c7b11670862a9" title="Oscillazione pistola camminando.">CAMMINA_off</a>;    </div>
+<div class="line"><a name="l00144"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a547e840f6e6c13266b0a57d8b56a47d3">  144</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#a547e840f6e6c13266b0a57d8b56a47d3" title="Velocità oscillazione pistola camminando.">CAMMINA_vel</a>;        </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a0ef15eecc8806560a5c71aff516d1dfe">  145</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#a0ef15eecc8806560a5c71aff516d1dfe" title="Frame attuale pistola.">frame</a>;              </div>
+<div class="line"><a name="l00146"></a><span class="lineno"><a class="code" href="structpistola__dat.html#ab63aa7b168f360c29d96731649e99705">  146</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="structpistola__dat.html#ab63aa7b168f360c29d96731649e99705" title="Numero frame animazione.">nframe</a>;             </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="code" href="structpistola__dat.html#a1802464b5a1ba9ee821f603c8b20d44d">  147</a></span>&#160;        <span class="keywordtype">float</span> <a class="code" href="structpistola__dat.html#a1802464b5a1ba9ee821f603c8b20d44d" title="Tempo animazione dello sparo.">t_SPARA</a>;  </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;};</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00152"></a><span class="lineno"><a class="code" href="structaudio__dat.html">  152</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structaudio__dat.html" title="Struttura contenente i dati dell&#39; audio.">audio_dat</a> {</div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="code" href="structaudio__dat.html#a461204e32aaa7af0cad41c757b56f4de">  153</a></span>&#160;        ALLEGRO_SAMPLE_ID <a class="code" href="structaudio__dat.html#a461204e32aaa7af0cad41c757b56f4de" title="Identificatore audio in riproduzione.">m_id</a>; </div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="code" href="structaudio__dat.html#a22019438c4a16e3e735f1485c452bd72">  155</a></span>&#160;        ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a22019438c4a16e3e735f1485c452bd72">atmosfera</a>; </div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="code" href="structaudio__dat.html#a059ee9b692b7afef651abf6f0de37073">  156</a></span>&#160;        ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a059ee9b692b7afef651abf6f0de37073">titolo</a>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno"><a class="code" href="structaudio__dat.html#a6f05e0f798cd33bae2d362696b979857">  157</a></span>&#160;        ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a6f05e0f798cd33bae2d362696b979857">vittoria</a>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="code" href="structaudio__dat.html#a048a56296e2e2ad6022ff9c52f06a3e2">  158</a></span>&#160;        ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a048a56296e2e2ad6022ff9c52f06a3e2">gameover</a>;</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="code" href="structaudio__dat.html#a8bbc9e41206180ac25151646d37598c9">  159</a></span>&#160;        ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a8bbc9e41206180ac25151646d37598c9">morte</a>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno"><a class="code" href="structaudio__dat.html#aecfd0ccbdb1fedf58608100cc7c3d09a">  160</a></span>&#160;        ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#aecfd0ccbdb1fedf58608100cc7c3d09a">passo</a>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno"><a class="code" href="structaudio__dat.html#a322f5b28b9d90cec4e66d4978f279107">  161</a></span>&#160;        ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a322f5b28b9d90cec4e66d4978f279107">pistola</a>;</div>
+<div class="line"><a name="l00162"></a><span class="lineno"><a class="code" href="structaudio__dat.html#ac3874d88afcd8664e32cbe2011d63f9b">  162</a></span>&#160;        ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#ac3874d88afcd8664e32cbe2011d63f9b">zombie</a>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno"><a class="code" href="structaudio__dat.html#a3f40fa1143978099b4cee8ab5a2a9a8f">  163</a></span>&#160;        ALLEGRO_SAMPLE *<a class="code" href="structaudio__dat.html#a3f40fa1143978099b4cee8ab5a2a9a8f">bomba</a>;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;};</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;</div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generato Mer 2 Lug 2014 14:42:37 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
+Generato Gio 4 Set 2014 12:44:46 per Zombie-Kaze da &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.7.6.1
+</a> 1.8.1.2
 </small></address>
-
 </body>
 </html>
