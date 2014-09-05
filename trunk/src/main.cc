@@ -308,7 +308,7 @@ int main(void)
 										ALLEGRO_PLAYMODE_ONCE, NULL);
 					}
 					livello++;
-                    pistola.tmax -= 5;
+                    pistola.tmax -= 3;
                     pistola.t = 0;
 					dealloca_ambiente(map, texture, nemici, pistola);
 					caricato = false;
