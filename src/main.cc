@@ -309,6 +309,7 @@ int main(void)
 					}
 					livello++;
                     pistola.tmax -= 5;
+                    pistola.t = 0;
 					dealloca_ambiente(map, texture, nemici, pistola);
 					caricato = false;
 					titolo.angle = sfondo.angle = 0;
