@@ -276,8 +276,8 @@ void muovi_player (player_dat &pl, mappa_dat &map, bool tasto[], audio_dat &audi
 
     //si gira
     if(!joy) {
-        pl.ang += tasto[SX] * pl.vel_gira;
-        pl.ang -= tasto[DX] * pl.vel_gira;
+        pl.ang += tasto[SX] * pl.vel_gira/10*6;
+        pl.ang -= tasto[DX] * pl.vel_gira/10*6;
     } else {
         double axis = joystate.stick[1].axis[1];
         axis > -0.3 && axis < 0.3? axis=0 : axis;
