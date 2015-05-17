@@ -10,5 +10,4 @@ Nella directory src/ eseguire il comando "make".
 Per compilare è necessaria la libreria allegro5.
 
 ### Download ###
-Windows: <br>
-<a href='https://www.dropbox.com/s/k1dxifzvtm2s8wj/Zombie-kaze.zip?dl=0'>https://www.dropbox.com/s/k1dxifzvtm2s8wj/Zombie-kaze.zip?dl=0</a> <br>
+Check releases for compiled Windows game. 
