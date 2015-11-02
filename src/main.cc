@@ -154,16 +154,18 @@ int main(void)
 	
 	al_install_keyboard();
 
-    if(al_install_joystick()) {
 
-        al_reconfigure_joysticks();
-        joystick=al_get_joystick(0);
+	//inizializza joystick
+	if(al_install_joystick()) {
+
+        	al_reconfigure_joysticks();
+        	joystick=al_get_joystick(0);
         
-        if(joystick != NULL) {        
-            cout<<"Riconosciuto joystick "<<joystick<<endl;
-            joy = true;
-        }
-    }
+        	if(joystick != NULL) {        
+            		cout<<"Riconosciuto joystick "<<joystick<<endl;
+            		joy = true;
+        	}
+    	}
 	
 	//font
 	cout<<"Caricamento: data/ZOMBIE.TTF    ";
